@@ -1,11 +1,10 @@
 import React from 'react';
 import './style/App.css';
+import Calculator from  './Calculator.js';
 
 function App() {
   return (
-    <div className="App">
-      bla bla
-    </div>
+    <Calculator/>
   );
 }
 
