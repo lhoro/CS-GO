@@ -1,12 +1,12 @@
 import React from 'react';
 import './style/App.css';
 
-function App() {
+function Weapons() {
   return (
-    <div className="App">
-      bla bla
+    <div className="Weapons">
+      wpons
     </div>
   );
 }
 
-export default App;
+export default Weapons;

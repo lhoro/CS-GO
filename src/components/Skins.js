@@ -1,12 +1,12 @@
 import React from 'react';
 import './style/App.css';
 
-function App() {
+function Skins() {
   return (
-    <div className="App">
-      bla bla
+    <div className="Skins">
+     skins
     </div>
   );
 }
 
-export default App;
+export default Skins;

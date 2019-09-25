@@ -1,12 +1,12 @@
 import React from 'react';
 import './style/App.css';
 
-function App() {
+function Homepage() {
   return (
-    <div className="App">
-      bla bla
+    <div className="Homepage">
+      hp
     </div>
   );
 }
 
-export default App;
+export default Homepage;

@@ -1,12 +1,12 @@
 import React from 'react';
 import './style/App.css';
 
-function App() {
+function Sidebar() {
   return (
-    <div className="App">
-      bla bla
+    <div className="Sidebar">
+      sbar
     </div>
   );
 }
 
-export default App;
+export default Sidebar;
