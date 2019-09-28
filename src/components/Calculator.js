@@ -7,8 +7,10 @@ class Calculator extends React.Component {
       super(props);
       this.state ={
         soult: 0,
+        idItem: 0,
         numb: 1,
         numb2: 0,
+        allItemVal: 0,
         steamProv: 0,
         item: [],
         summary: 0,
@@ -28,13 +30,15 @@ class Calculator extends React.Component {
       this.setState({
         soult: cost*(val)-cost*(val)*15/100,
         steamProv:cost*(val)*15/100,
-        numb2: 1
+        numb2: 1,
+        allItemVal: 0
       })
     }else{
       this.setState({
         soult: cost*(this.state.numb)-cost*(this.state.numb)*15/100,
         steamProv:cost*(this.state.numb)*15/100,
-        numb2: 1
+        numb2: 1,
+        allItemVal: 0
 
       })
     }
@@ -44,22 +48,26 @@ class Calculator extends React.Component {
 
 
    addItem = () =>{
-    const cost = document.querySelector('#cost').value
+    let cost = document.querySelector('#cost').value
     const val = document.querySelector('#quantity').value
-    
+    cost = parseFloat(cost).toFixed(2)
     if(val>0){
-      const obj = {cena:cost,ilosc:val}
+      const obj = {id: this.state.idItem,cena:cost,ilosc:val}
       this.state.item.push(obj)
       this.setState({
         item: this.state.item,
-        numb2: 0
+        numb2: 0,
+        allItemVal: 0,
+        idItem: this.state.idItem +1
       })
     }else{
-      const obj = {cena:cost,ilosc:'1'}
+      const obj = {id: this.state.idItem,cena:cost,ilosc:'1'}
       this.state.item.push(obj)
       this.setState({
         item: this.state.item,
-        numb2: 0
+        numb2: 0,
+        allItemVal: 0,
+        idItem: this.state.idItem +1
       })
     } 
     document.querySelector('#cost').value = ''
@@ -76,7 +84,8 @@ class Calculator extends React.Component {
      })
      this.setState({
       summary:  sum ,
-      numb2: 0
+      numb2: 0,
+      allItemVal: 1
     })
     }else{
       return 0;
@@ -84,12 +93,12 @@ class Calculator extends React.Component {
       
    }
    valueAllItem = ()=>{
-     if(this.state.summary > 0){
+     if(this.state.summary > 0 && this.state.allItemVal >0){
       return(
         <>
-        <p>value all your item: {this.state.summary} {this.state.valute} </p>
-        <p>soult all your item: {this.state.summary-this.state.summary*15/100} {this.state.valute}</p>
-        <p>steam provision all your item: {this.state.summary*15/100} {this.state.valute}</p>
+        <p>value all your item: {this.state.summary.toFixed(2)} {this.state.valute} </p>
+        <p>soult all your item: {this.state.summary-this.state.summary.toFixed(2)*15/100} {this.state.valute}</p>
+        <p>steam provision all your item: {this.state.summary.toFixed(2)*15/100} {this.state.valute}</p>
         </>
        )
      }else{
@@ -102,8 +111,8 @@ class Calculator extends React.Component {
      if(this.state.numb2>0){
      return (
       <>
-        <p>soult: {this.state.soult} {this.state.valute}</p>
-        <p>steam provision: {this.state.steamProv} {this.state.valute}</p>
+        <p>soult: {this.state.soult.toFixed(2)} {this.state.valute}</p>
+        <p>steam provision: {this.state.steamProv.toFixed(2)} {this.state.valute}</p>
       </>
      )
    }else{
@@ -114,51 +123,59 @@ class Calculator extends React.Component {
   changeValute = (e) =>{
     const actualyValute = e.currentTarget.value
     if(this.state.valute=="PLN" && actualyValute == 'EUR'){
-      const cost = document.querySelector('#cost').value*0.228 
-      document.querySelector('#cost').value =  cost.toFixed(2)
+      const cost = document.querySelector('#cost').value/4.38
+      document.querySelector('#cost').value =  cost
       this.state.item.map(event =>{
-        const newCost = event.cena*0.228
+        const newCost = event.cena/4.38
         event.cena = newCost.toFixed(2)
      })
     }else if (this.state.valute=="EUR" && actualyValute == 'PLN'){
-      const cost = document.querySelector('#cost').value*4.382
-      document.querySelector('#cost').value =  cost.toFixed(2)
+      const cost = document.querySelector('#cost').value*4.38
+      document.querySelector('#cost').value =  cost
       this.state.item.map(event =>{
-        const newCost = event.cena*4.382
+        const newCost = event.cena*4.38
         event.cena = newCost.toFixed(2)
      })
     }else if (this.state.valute=="PLN" && actualyValute == 'USD'){
-      const cost = document.querySelector('#cost').value*0.249
-      document.querySelector('#cost').value =  cost.toFixed(2)
+      const cost = document.querySelector('#cost').value/4.006
+      document.querySelector('#cost').value =  cost
       this.state.item.map(event =>{
-        const newCost = event.cena*0.249.toFixed(2)
+        const newCost = event.cena*0.249
         event.cena = newCost.toFixed(2)
      })
     }else if (this.state.valute=="USD" && actualyValute == 'PLN'){
       const cost = document.querySelector('#cost').value*4.006
-      document.querySelector('#cost').value =  cost.toFixed(2)
+      document.querySelector('#cost').value =  cost
       this.state.item.map(event =>{
         const newCost = event.cena*4.006
         event.cena = newCost.toFixed(2)
      })
     }else if (this.state.valute=="USD" && actualyValute == 'EUR'){
-      const cost = document.querySelector('#cost').value*0.91
-      document.querySelector('#cost').value =  cost.toFixed(2)
+      const cost = document.querySelector('#cost').value/1.093
+      document.querySelector('#cost').value =  cost
       this.state.item.map(event =>{
-        const newCost = event.cena*0.91
+        const newCost = event.cena/1.093
         event.cena = newCost.toFixed(2)
      })
     }else if (this.state.valute=="EUR" && actualyValute == 'USD'){
       const cost = document.querySelector('#cost').value*1.093
-      document.querySelector('#cost').value =  cost.toFixed(2)
+      document.querySelector('#cost').value =  cost
       this.state.item.map(event =>{
         const newCost = event.cena*1.093
         event.cena = newCost.toFixed(2)
      })
     }
     this.setState({
-      valute: actualyValute
+      valute: actualyValute,
+      allItemVal: 0
     })
+  }
+  deleteOneItem = (id) =>{
+    this.state.item.splice(id, 1)
+    this.setState({
+      item: this.state.item
+    })
+  
   }
 
    render(){
@@ -180,10 +197,11 @@ class Calculator extends React.Component {
 
           {this.state.item.map((event,index) => {
             return(
-              <tr className={index%2===0?'color1': 'color2'}>
-            <td key={index} id={index + 1} >{index+1}</td>
+              <tr id={index + 1}   className={index%2===0?'color1': 'color2'}>
+            <td key={index} >{index+1}</td>
             <td>{event.cena} {this.state.valute}</td>
             <td>{event.ilosc} szt.</td>
+            <button onClick={this.deleteOneItem.bind(this,index)}>usuń</button>
             </tr>
             )
           })}
