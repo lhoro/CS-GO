@@ -4,7 +4,8 @@ import './style/App.css';
 function Homepage() {
   return (
     <div className="Homepage">
-      hp
+      CS:GO jest grą...
+      i tyle trzeba wiedzieć
     </div>
   );
 }
