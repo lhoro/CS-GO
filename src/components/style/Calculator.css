@@ -10,3 +10,6 @@
 .table-item{
   display:block;
 }
+.errorCost{
+  color:red;
+}

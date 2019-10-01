@@ -15,7 +15,8 @@ class Calculator extends React.Component {
         item: [],
         summary: 0,
         actualyLength : 0,
-        valute: 'PLN'
+        valute: 'PLN',
+        error: ''
       }
   }
   componentDidUpdate(){
@@ -25,23 +26,34 @@ class Calculator extends React.Component {
 
  money = () =>{
     const cost = document.querySelector('#cost').value
-    const val = document.querySelector('#quantity').value
-    if(val > 0){
+    let val = document.querySelector('#quantity').value
+    if(cost>0){
+      if(val > 0){
+        val = parseInt(val)
+        this.setState({
+          soult: cost*(val)-cost*(val)*15/100,
+          steamProv:cost*(val)*15/100,
+          numb2: 1,
+          allItemVal: 0
+        })
+      }else{
+        this.setState({
+          soult: cost*(this.state.numb)-cost*(this.state.numb)*15/100,
+          steamProv:cost*(this.state.numb)*15/100,
+          numb2: 1,
+          allItemVal: 0
+  
+        })
+      }
       this.setState({
-        soult: cost*(val)-cost*(val)*15/100,
-        steamProv:cost*(val)*15/100,
-        numb2: 1,
-        allItemVal: 0
+        error: ''
       })
     }else{
       this.setState({
-        soult: cost*(this.state.numb)-cost*(this.state.numb)*15/100,
-        steamProv:cost*(this.state.numb)*15/100,
-        numb2: 1,
-        allItemVal: 0
-
+        error: 'PODAJ CENE ABY SPRWADZIC ILE OTRZYMASZ !!!'
       })
     }
+    
     this.valueOneItem()
    }
 
@@ -49,27 +61,37 @@ class Calculator extends React.Component {
 
    addItem = () =>{
     let cost = document.querySelector('#cost').value
-    const val = document.querySelector('#quantity').value
+    let val = document.querySelector('#quantity').value
     cost = parseFloat(cost).toFixed(2)
-    if(val>0){
-      const obj = {id: this.state.idItem,cena:cost,ilosc:val}
-      this.state.item.push(obj)
+    if(cost > 0){
+      if(val>0){
+        val = parseInt(val)
+        const obj = {id: this.state.idItem,cena:cost,ilosc:val}
+        this.state.item.push(obj)
+        this.setState({
+          item: this.state.item,
+          numb2: 0,
+          allItemVal: 0,
+          idItem: this.state.idItem +1
+        })
+      }else{
+        const obj = {id: this.state.idItem,cena:cost,ilosc:'1'}
+        this.state.item.push(obj)
+        this.setState({
+          item: this.state.item,
+          numb2: 0,
+          allItemVal: 0,
+          idItem: this.state.idItem +1
+        })
+    }
+    this.setState({
+      error: ''
+    })
+    } else{
       this.setState({
-        item: this.state.item,
-        numb2: 0,
-        allItemVal: 0,
-        idItem: this.state.idItem +1
+        error: 'PODAJ CENE  ITEMU KTÓRY CHCESZ DODAĆ!!!'
       })
-    }else{
-      const obj = {id: this.state.idItem,cena:cost,ilosc:'1'}
-      this.state.item.push(obj)
-      this.setState({
-        item: this.state.item,
-        numb2: 0,
-        allItemVal: 0,
-        idItem: this.state.idItem +1
-      })
-    } 
+    }
     document.querySelector('#cost').value = ''
     document.querySelector('#quantity').value = '' 
   }
@@ -94,11 +116,13 @@ class Calculator extends React.Component {
    }
    valueAllItem = ()=>{
      if(this.state.summary > 0 && this.state.allItemVal >0){
+       const soultAll = this.state.summary-this.state.summary*15/100
+       const steamProvAll =  this.state.summary.toFixed(2)*15/100
       return(
         <>
         <p>value all your item: {this.state.summary.toFixed(2)} {this.state.valute} </p>
-        <p>soult all your item: {this.state.summary-this.state.summary.toFixed(2)*15/100} {this.state.valute}</p>
-        <p>steam provision all your item: {this.state.summary.toFixed(2)*15/100} {this.state.valute}</p>
+        <p>soult all your item: {soultAll.toFixed(2)} {this.state.valute}</p>
+        <p>steam provision all your item: {steamProvAll.toFixed(2)} {this.state.valute}</p>
         </>
        )
      }else{
@@ -169,6 +193,10 @@ class Calculator extends React.Component {
       valute: actualyValute,
       allItemVal: 0
     })
+    const cost = document.querySelector('#cost').value
+    if(cost > 0){
+      this.money()
+    }
   }
   deleteOneItem = (id) =>{
     this.state.item.splice(id, 1)
@@ -177,7 +205,23 @@ class Calculator extends React.Component {
     })
   
   }
+   deleteEFromInput  = () =>{
+    const cost = document.querySelector('#cost').value
+      console.log(cost.indexOf(2))
+     if(cost.indexOf(cost.keyCode !== 69) > -1){
+      console.log("bye")
+     }else{
+      console.log("elo")
+     }
+   }
 
+   deleteEFromInputt = (event) =>{
+   let cost =  event.currentTarget.value
+   let test = document.querySelector('#cost').value
+   console.log(test)
+   console.log(cost)
+   console.log(cost.length)
+   }
    render(){
      return(
     <div>
@@ -186,8 +230,6 @@ class Calculator extends React.Component {
         <option>EUR</option>
         <option>USD</option>
       </select>
-
-     
       <table className= 'table-item'  border="0">
         <tr>
           <th>l.p.</th>
@@ -207,11 +249,13 @@ class Calculator extends React.Component {
           })}
         
        </table>
-      <input type='number' id='cost' placeholder="Cena"/>
+      <input type='number' id='cost' placeholder="Cena" onKeyDown={(evt) => ["e", "E", "+", "-"].includes(evt.key) && evt.preventDefault()}/>
       <span>x</span>
-      <input type='number' id='quantity' placeholder="1" />
+      <input type='number' id='quantity' placeholder="1"   onKeyDown={(evt) => ["e", "E", "+", "-",",","."].includes(evt.key) && evt.preventDefault()}/>
       <button onClick = {this.addItem.bind(this)}>dodaj item</button>
       <button className= 'button-s'onClick={this.money.bind(this)}> Sprawdź</button>
+      <br/>
+      <h1 className= "errorCost">{this.state.error}</h1>
       <br/>
       <div>
       {this.valueOneItem()}
