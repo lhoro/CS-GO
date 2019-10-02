@@ -346,7 +346,7 @@ class Calculator extends React.Component {
               {this.valueAllItem()}
             </div>
             <div className="Calculator-LogoCS">
-            <img className="Calculator-LogoCS-IMG" src="/logo.png" alt="SORRY THIS IMG IS CRASHED"/>
+            <img className="Calculator-LogoCS-IMG" src="/image/layout/logo.png" alt="SORRY THIS IMG IS CRASHED"/>
             </div>
       
     </div>

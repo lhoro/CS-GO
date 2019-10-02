@@ -242,7 +242,7 @@ input[type=number] {
 }
 
 .Calculator-Form-Box{
-  background: url("/tlo-calc.jpg") no-repeat scroll center ;
+  background: url("/image/layout/tlo-calc.jpg") no-repeat scroll center ;
   background-size: 100% 100%;
   padding-bottom:20px;
 }
