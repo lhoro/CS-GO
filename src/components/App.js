@@ -9,8 +9,9 @@ import Weapons from "./Weapons";
 import Footer from "./Footer";
 import Ranks from "./Ranks";
 
+
 function App() {
-  return (  
+  return (
     <div className="App">
       <table>
         <tbody>
@@ -32,7 +33,6 @@ function App() {
         </tbody>
       </table>
       <Footer />
-      {/* <Menu /> */}
       <audio controls autoPlay className="Player" />
     </div>
   );
