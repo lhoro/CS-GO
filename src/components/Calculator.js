@@ -121,7 +121,7 @@ class Calculator extends React.Component {
        const steamProvAll =  this.state.summary.toFixed(2)*15/100
       return(
         <>
-        <p className="Calculator-Resoult">Wynik:</p>
+        <p className="Calculator-Resoult">Resoult:</p>
         <p>value all your item: {this.state.summary.toFixed(2)} {this.state.valute} </p>
         <p>soult all your item: {soultAll.toFixed(2)} {this.state.valute}</p>
         <p>steam provision all your item: {steamProvAll.toFixed(2)} {this.state.valute}</p>
@@ -134,7 +134,7 @@ class Calculator extends React.Component {
      if(this.state.ShowValueItem>0){
      return (
       <>
-        <span className="Calculator-Resoult">Wynik:</span>
+        <span className="Calculator-Resoult">Resoult:</span>
         <p>soult: {this.state.soult.toFixed(2)} {this.state.valute}</p>
         <p>steam provision: {this.state.steamProv.toFixed(2)} {this.state.valute}</p>
       </>
@@ -142,7 +142,7 @@ class Calculator extends React.Component {
    }else{
     return (
       <>
-        <span className="Calculator-Resoult">Wynik:</span>
+        <span className="Calculator-Resoult">Resoult:</span>
         <p>soult: 0.00 {this.state.valute}</p>
         <p>steam provision: 0.00 {this.state.valute}</p>
       </>
@@ -159,7 +159,9 @@ class Calculator extends React.Component {
       this.state.item.map(event =>{
         const newCost = event.cena/4.38
         event.cena = newCost.toFixed(2)
+        return 0;
      })
+
     }
     }else if (this.state.valute==="EUR" && actualyValute === 'PLN'){
       const cost = document.querySelector('#cost').value*4.38
@@ -168,6 +170,7 @@ class Calculator extends React.Component {
         this.state.item.map(event =>{
           const newCost = event.cena*4.38
           event.cena = newCost.toFixed(2)
+          return 0;
        })
       }
     }else if (this.state.valute==="PLN" && actualyValute === 'USD'){
@@ -177,6 +180,7 @@ class Calculator extends React.Component {
       this.state.item.map(event =>{
         const newCost = event.cena*0.249
         event.cena = newCost.toFixed(2)
+        return 0;
      })
     }
     }else if (this.state.valute==="USD" && actualyValute === 'PLN'){
@@ -186,6 +190,7 @@ class Calculator extends React.Component {
       this.state.item.map(event =>{
         const newCost = event.cena*4.006
         event.cena = newCost.toFixed(2)
+        return 0;
      })
     }
     }else if (this.state.valute==="USD" && actualyValute === 'EUR'){
@@ -195,6 +200,7 @@ class Calculator extends React.Component {
       this.state.item.map(event =>{
         const newCost = event.cena/1.093
         event.cena = newCost.toFixed(2)
+        return 0;
      })
     }
     }else if (this.state.valute==="EUR" && actualyValute === 'USD'){
@@ -204,6 +210,7 @@ class Calculator extends React.Component {
       this.state.item.map(event =>{
         const newCost = event.cena*1.093
         event.cena = newCost.toFixed(2)
+        return 0;
      })
     }
     }
@@ -216,12 +223,13 @@ class Calculator extends React.Component {
       this.money()
     }
 
-    if(cost == 0){
+    if(cost===0){
       document.querySelector('#cost').value = ''
     }
     if(this.state.item.length>0){
       this.moneyAll()  
     }
+    return;
   }
 
 
@@ -283,10 +291,10 @@ class Calculator extends React.Component {
           </select>
 
           <div className="Calculator-Form">
-            <span  className="Calculator-Form-Span">NAME SKIN</span>
-            <input type='text'  id='skinName' className="Calculator-Form-inputSkinName" maxlength="30" placeholder="Nazwa skina"  />
+            <span  className="Calculator-Form-Span">SKIN NAME</span>
+            <input type='text'  id='skinName' className="Calculator-Form-inputSkinName" maxLength="30" placeholder="Skin name ..."  />
             <span  className="Calculator-Form-Span">COST</span>
-            <input type='number'  id='cost' onChange={this.lookingForInput.bind(this)} className="Calculator-Form-inputCost" min='0' placeholder="Cena" onKeyDown={(evt) => ["e", "E", "+", "-"].includes(evt.key) && evt.preventDefault()}/>
+            <input type='number'  id='cost' onChange={this.lookingForInput.bind(this)} className="Calculator-Form-inputCost" min='0' placeholder="cost ..." onKeyDown={(evt) => ["e", "E", "+", "-"].includes(evt.key) && evt.preventDefault()}/>
             <span  className="Calculator-Form-Span">QUANTITY</span>
             <input type='number' id='quantity' onChange={this.money.bind(this)} className="Calculator-Form-inputQuantity" placeholder="1" min='1' onKeyDown={(evt) => ["e", "E", "+", "-",",","."].includes(evt.key) && evt.preventDefault()}/>
             <span className= "errorCost">{this.state.error}</span>   
@@ -299,12 +307,13 @@ class Calculator extends React.Component {
       </div>
       <div className= 'Calculator-Table-Items' >
         <table className='Calculator-Table-Form' border="1">
+          <tbody>
           <tr>
             <th className="Table-Form-Title-Index" >l.p.</th>
-            <th className="Table-Form-Title-NameSkin" >NAZWA SKINA</th>
-            <th className="Table-Form-Title-Cost" >CENA</th>
-            <th className="Table-Form-Title-Quantity">ILOŚĆ</th>
-            <th className="Table-Form-Title-Sumary">ŁĄCZNA WARTOŚĆ</th>
+            <th className="Table-Form-Title-NameSkin" >SKIN NAME</th>
+            <th className="Table-Form-Title-Cost" >COST</th>
+            <th className="Table-Form-Title-Quantity">QUANTITY</th>
+            <th className="Table-Form-Title-Sumary">SUMARRY VALUE</th>
             <th className="Table-Form-Title-Delete"> </th>
           </tr>
 
@@ -320,14 +329,14 @@ class Calculator extends React.Component {
               </tr>
               )
             })}
-          
+          </tbody>
         </table>
       </div>
       
       <div className="Calculator-Button-Box">
       <div  onClick={this.deleteAllItem.bind(this)} className="svg-wrapper Calculator-deleteAll">
       <svg height="40" width="150">
-         <text x="37" y="25" font-family="sans-serif" font-size="15px"  fill="white">DELETE ALL</text>
+         <text x="37" y="25" fontFamily="sans-serif" fontSize="15px"  fill="white">DELETE ALL</text>
          <rect id="shape" height="40" width="150" />  
          </svg>
       </div>    
@@ -336,7 +345,7 @@ class Calculator extends React.Component {
               {this.valueAllItem()}
             </div>
             <div className="Calculator-LogoCS">
-            <img className="Calculator-LogoCS-IMG" src="/logo.png"/>
+            <img className="Calculator-LogoCS-IMG" src="/logo.png" alt="SORRY THIS IMG IS CRASHED"/>
             </div>
       
     </div>
