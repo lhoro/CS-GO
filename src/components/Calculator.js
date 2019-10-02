@@ -118,16 +118,22 @@ class Calculator extends React.Component {
     })
    }
    valueAllItem = ()=>{
-       const soultAll = this.state.summary-this.state.summary*15/100
-       const steamProvAll =  this.state.summary.toFixed(2)*15/100
-      return(
-        <>
-        <p className="Calculator-Resoult">Resoult:</p>
-        <p>value all your item: {this.state.summary.toFixed(2)} {this.state.valute} </p>
-        <p>soult all your item: {soultAll.toFixed(2)} {this.state.valute}</p>
-        <p>steam provision all your item: {steamProvAll.toFixed(2)} {this.state.valute}</p>
-        </>
-       )
+     if(this.state.item.length>0){
+      const soultAll = this.state.summary-this.state.summary*15/100
+      const steamProvAll =  this.state.summary.toFixed(2)*15/100
+      
+     return(
+       <>
+       <p className="Calculator-Resoult">Resoult:</p>
+       <p>value all your item: {this.state.summary.toFixed(2)} {this.state.valute} </p>
+       <p>soult all your item: {soultAll.toFixed(2)} {this.state.valute}</p>
+       <p>steam provision all your item: {steamProvAll.toFixed(2)} {this.state.valute}</p>
+       </>
+      )
+     }else{
+       return ;
+     }
+       
      
    }
 
@@ -306,49 +312,50 @@ class Calculator extends React.Component {
           {this.valueOneItem()}
         </div>
       </div>
-      <div className= 'Calculator-Table-Items' >
-        <table className='Calculator-Table-Form' border="1">
-          <tbody>
-          <tr>
-            <th className="Table-Form-Title-Index" >l.p.</th>
-            <th className="Table-Form-Title-NameSkin" >SKIN NAME</th>
-            <th className="Table-Form-Title-Cost" >COST</th>
-            <th className="Table-Form-Title-Quantity">QUANTITY</th>
-            <th className="Table-Form-Title-Sumary">SUMARRY VALUE</th>
-            <th className="Table-Form-Title-Delete"> </th>
-          </tr>
+      <div className="Calculator-Body">
+        <div className= 'Calculator-Table-Items' >
+          <table className='Calculator-Table-Form' border="1">
+            <tbody>
+            <tr>
+              <th className="Table-Form-Title-Index" >l.p.</th>
+              <th className="Table-Form-Title-NameSkin" >SKIN NAME</th>
+              <th className="Table-Form-Title-Cost" >COST</th>
+              <th className="Table-Form-Title-Quantity">QUANTITY</th>
+              <th className="Table-Form-Title-Sumary">SUMARRY VALUE</th>
+              <th className="Table-Form-Title-Delete"> </th>
+            </tr>
 
-            {this.state.item.map((event,index) => {
-              return(
-                <tr id={index + 1}   className={index%2===0?'color1': 'color2'}>
-              <td key={index} className="Table-Index" >{index+1}</td>
-              <td className="Table-SkinName">{event.nazwa}</td>
-              <td className="Table-Cost">{event.cena} {this.state.valute}</td>
-              <td className="Table-Quantity">{event.ilosc} szt.</td>
-              <td className="Table-Sumary">{(event.cena*event.ilosc).toFixed(2)} {this.state.valute}</td>
-              <td className="Table-ButtonDelete"><button onClick={this.deleteOneItem.bind(this,index)}>DELETE</button></td>
-              </tr>
-              )
-            })}
-          </tbody>
-        </table>
+              {this.state.item.map((event,index) => {
+                return(
+                  <tr id={index + 1}   className={index%2===0?'color1': 'color2'}>
+                <td key={index} className="Table-Index" >{index+1}</td>
+                <td className="Table-SkinName">{event.nazwa}</td>
+                <td className="Table-Cost">{event.cena} {this.state.valute}</td>
+                <td className="Table-Quantity">{event.ilosc} szt.</td>
+                <td className="Table-Sumary">{(event.cena*event.ilosc).toFixed(2)} {this.state.valute}</td>
+                <td className="Table-ButtonDelete"><button onClick={this.deleteOneItem.bind(this,index)}>DELETE</button></td>
+                </tr>
+                )
+              })}
+            </tbody>
+          </table>
+        </div>
+        
+        <div className="Calculator-Button-Box">
+        <div  onClick={this.deleteAllItem.bind(this)} className="svg-wrapper Calculator-deleteAll">
+        <svg height="40" width="150">
+          <text x="37" y="25" fontFamily="sans-serif" fontSize="15px"  fill="white">DELETE ALL</text>
+          <rect id="shape" height="40" width="150" />  
+          </svg>
+        </div>    
+        </div>
+              <div className="Calculator-Quantity">
+                {this.valueAllItem()}
+              </div>
+              <div className="Calculator-LogoCS">
+              <img className="Calculator-LogoCS-IMG" src="/image/layout/logo.png" alt="SORRY THIS IMG IS CRASHED"/>
+              </div>
       </div>
-      
-      <div className="Calculator-Button-Box">
-      <div  onClick={this.deleteAllItem.bind(this)} className="svg-wrapper Calculator-deleteAll">
-      <svg height="40" width="150">
-         <text x="37" y="25" fontFamily="sans-serif" fontSize="15px"  fill="white">DELETE ALL</text>
-         <rect id="shape" height="40" width="150" />  
-         </svg>
-      </div>    
-      </div>
-            <div className="Calculator-Quantity">
-              {this.valueAllItem()}
-            </div>
-            <div className="Calculator-LogoCS">
-            <img className="Calculator-LogoCS-IMG" src="/image/layout/logo.png" alt="SORRY THIS IMG IS CRASHED"/>
-            </div>
-      
     </div>
      )
     

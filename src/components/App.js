@@ -12,7 +12,7 @@ import Ranks from "./Ranks";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" >
       <table>
         <tbody>
           <tr>

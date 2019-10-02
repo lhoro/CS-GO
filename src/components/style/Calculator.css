@@ -8,6 +8,8 @@ body{
 .Calculator{
   width: 99vw;
   height: 100vh;
+  background: url("/image/layout/table.jpg");
+  overflow: scroll;
 }
 
 .Calculator-Back{
@@ -84,7 +86,13 @@ transform: translate(-50%);
 }
 
 .Calculator-Table-Form{
-  width:100%;
+  width:95%;
+  margin:0px auto;
+
+}
+.Calculator-Body{
+  background: url("/image/layout/table.jpg");
+  /* background-size: 100% ; */
 }
 
 .Calculator-Resoult{
@@ -177,6 +185,7 @@ input[type=number] {
 }
 .Calculator-deleteAll{
   float:right;
+  margin-right:2.5%;
 }
 
 #shape {
@@ -187,6 +196,7 @@ input[type=number] {
   stroke-dashoffset: -220;
   transition: 1s all ease;
   background:none;
+
 }
 
 .svg-wrapper:hover #shape {
@@ -248,6 +258,7 @@ input[type=number] {
 }
 .Calculator-ValueOneItem{
   min-height:120px;
+  margin-left:15px;
 }
 
 /* LOGO COUNTER STRIKE */
