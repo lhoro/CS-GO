@@ -6,7 +6,8 @@ body{
   margin:0px auto;
 }
 .Calculator{
-  margin-top:-1px;
+  width: 99vw;
+  height: 100vh;
 }
 
 .Calculator-Back{
