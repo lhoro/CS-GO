@@ -1,0 +1,15 @@
+@import "colors.css";
+
+.Ranks{
+  margin: 0px auto;
+  padding: 0px;
+  width:100vw;
+  height:100vh;
+  background-color: aquamarine;
+}
+
+.Ranks-Back{
+  position: absolute;
+  top: 90vh;
+  left: 150vw;
+}

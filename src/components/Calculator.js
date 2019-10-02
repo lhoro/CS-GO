@@ -1,9 +1,12 @@
 import React from 'react';
-import './style/App.css';
+import './style/Calculator.css';
+
+import { move } from './Service';
 
 function App() {
   return (
-    <div className="app">
+    <div className="Calculator">
+      <button className="Calculator-Back" onClick={()=>move()}>BACK</button>
       calc
     </div>
   );

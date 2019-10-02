@@ -1,0 +1,52 @@
+@import "colors.css";
+
+.Homepage{
+  margin: 0px auto;
+  width:100vw;
+  height:100vh;
+  background-color: bisque;
+}
+
+.Animation-Box {
+  width:256px;
+  height:256px;
+}
+
+.Coins {
+  position:relative;
+  width:100%;
+  height:100%;
+  transform-style:preserve-3d;
+  transition:0.5s;
+}
+
+.Animation-Box:hover > .Coins {
+  transform:rotateY(180deg);
+}
+
+.Animation-Box:active > .Coins {
+  transition:3s;
+  transform:rotateY(1800deg);
+}
+
+.CT {
+  position:absolute;
+  width:100%;
+  height:100%;
+  background: url('/image/coins/ct.png') no-repeat;
+  background-size:100%;
+  font-size:1.6em;
+  backface-visibility:hidden;
+}
+
+.TT {
+  position:absolute;
+  width:100%;
+  height:100%;
+  line-height:240px;
+  color:#FFF;
+  font-size:1.6em;
+  background: url('/image/coins/tt.png') no-repeat;
+  transform:rotateY(180deg);
+  backface-visibility:hidden;
+}

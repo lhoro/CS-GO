@@ -1,0 +1,15 @@
+@import "colors.css";
+
+.Skins{
+  margin: 0px auto;
+  padding: 0px;
+  width:100vw;
+  height:100vh;
+  background-color: blueviolet;
+}
+
+.Skins-Back{
+  position: absolute;
+  top: 150vh;
+  left: 205vw;
+}

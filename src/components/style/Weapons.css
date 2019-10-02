@@ -1,4 +1,77 @@
-.weapon-icon {
-  width: 400px;
+@import "colors.css";
+
+.Weapons{
+  margin: 0px auto;
+  padding: 0px;
+  width:100vw;
+  height:100vh;
+  overflow: scroll;
+  background-color: forestgreen;
+}
+
+.Weapon{
+  margin: 5px 5% 5px 5%;
+  width:90%;
+  height: 150px;
+  background-color: var(--app-color);
+}
+
+
+.Weapons :hover .Weapon-Icon{
+  transform: scale(1.2);
+}
+
+.Value{
+  font-weight: 800;
+}
+
+.Weapon-Stats1{
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  float:left;
+}
+
+.Weapon-Name{
+  font-size: 25px;
+  padding: 8px;
+  width: 100%;
+  text-align: center;
+  font-weight: 800;
+}
+
+.Weapon-Icon {
+  width: 40%;
+  margin-top:15px;
   height: 120px;
+  float:left;
+}
+
+.Weapon-Stats2{
+  width: 40%;
+  height: 150px;
+  float:left;
+}
+
+.Weapon-Stats2-Box1{
+  padding-top: 8px;
+  width: 50%;
+  height: 150px;
+  float: left;
+  text-align: center;
+}
+
+.Weapon-Stats2-Box2{
+  padding-top: 8px;
+  width: 50%;
+  height: 150px;
+  float: right;
+  text-align: center;
+}
+
+.Weapon-Back{
+  position: absolute;
+  top: 150vh;
+  left: 95vw;
+  transform: translateX(-100%);
 }
