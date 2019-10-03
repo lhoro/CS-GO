@@ -5,11 +5,66 @@
   padding: 0px;
   width:100vw;
   height:100vh;
-  background-color: aquamarine;
+  background-color: rgb(31, 31, 31);
+ text-align:center;
+
 }
 
 .Ranks-Back{
   position: absolute;
   top: 90vh;
   left: 150vw;
+}
+.Ranks-Box-Title{
+  text-align:center;
+  margin-top:0px;
+  margin-bottom:40px;
+}
+
+.Ranks-AllTable-Box{
+margin: 0px auto;
+width:97%
+}
+
+.Ranks-Table-Box{
+  width:33%;
+  float:left;
+  display:inline;
+  font-size:15px;
+  text-align:center;
+}
+
+.Ranks-Table-Title{
+  border:solid 1px;
+  margin:0px 0px 0px 0px;
+  padding: 5px 0px 10px 0px;
+  font-family: "Arial Black";
+}
+
+.Ranks-Table{
+  width:100%;
+}
+
+.Ranks table,
+.Ranks th,
+.Ranks td{
+  border: 1px solid rgb(255, 255, 255);
+}
+
+
+/* MM STYLES */
+.MM-Table-Box{
+  background: #2e2e2e
+}
+
+
+
+
+/* WINGMAN STYLES */
+
+
+
+/* DANGER ZONE STYLES */
+.DZ-Table-Box{
+  background: #2e2e2e
 }

@@ -1,0 +1,94 @@
+﻿[
+	{
+		"rank_img": "./image/ranks/MM/s1.png",
+		"rank_name": "Silver I",
+		"rank_funny_descript": "Who Would have thought there are people in this skill group"
+	},
+	{
+		"rank_img": "./image/ranks/MM/s2.png",
+		"rank_name": "Silver II",
+		"rank_funny_descript": "No, You won't unlock a scope on the M4"
+	},
+	{
+		"rank_img": "./image/ranks/MM/s3.png",
+		"rank_name": "Silver III",
+		"rank_funny_descript": "Meybe you were good in COD but welcome to CS"
+	},
+	{
+		"rank_img": "./image/ranks/MM/s4.png",
+		"rank_name": "Silver IV",
+		"rank_funny_descript": "P90 and Scar are not the only weapons here"
+	},
+	{
+		"rank_img": "./image/ranks/MM/s5.png",
+		"rank_name": "Silver Elite",
+		"rank_funny_descript": "To get out of the 'elohell' suck less"
+	},
+	{
+		"rank_img": "./image/ranks/MM/s6.png",
+		"rank_name": "Silver Elite Master",
+		"rank_funny_descript": "You could possibly rank up if you gave up awping"
+	},
+	{
+		"rank_img": "./image/ranks/MM/g1.png",
+		"rank_name": "Gold Nova I",
+		"rank_funny_descript": "When your teammate sucks don't forget to ask 'are u a fucking silver?'"
+	},
+	{
+		"rank_img": "./image/ranks/MM/g2.png",
+		"rank_name": "Gold Nova II",
+		"rank_funny_descript": "Tip: click on their heads"
+	},
+	{
+		"rank_img": "./image/ranks/MM/g3.png",
+		"rank_name": "Gold Nova III",
+		"rank_funny_descript": "Wow, it took you 1500 hours"
+	},
+	{
+		"rank_img": "./image/ranks/MM/g4.png",
+		"rank_name": "Gold Nova Master",
+		"rank_funny_descript": "4-a typical number of bullets you fire before hitting something with the awp"
+	},
+	{
+		"rank_img": "./image/ranks/MM/mg1.png",
+		"rank_name": "Master Guardian I",
+		"rank_funny_descript": "How are  you better then GNs? Not at All"
+	},
+	{
+		"rank_img": "./image/ranks/MM/mg2.png",
+		"rank_name": "Master Guardian II",
+		"rank_funny_descript": "Congrats on being average"
+	},
+	{
+		"rank_img": "./image/ranks/MM/mge.png",
+		"rank_name": "Master Guardian Elite",
+		"rank_funny_descript": "From now on you can safely call previous ranks 'low skill'"
+	},
+	{
+		"rank_img": "./image/ranks/MM/dmg.png",
+		"rank_name": "Distinguished Master Guardian",
+		"rank_funny_descript": "You will stay here forever"
+	},
+	{
+		"rank_img": "./image/ranks/MM/le.png",
+		"rank_name": "Legendary Eagle",
+		"rank_funny_descript": "Get an alt account for the solo queue and GE friends for the maintance of this rank"
+	},
+	{
+		"rank_img": "./image/ranks/MM/lem.png",
+		"rank_name": "Legendary Eagle Master",
+		"rank_funny_descript": "In higher groups there are mostly cheaters anyway so your GE flair on Reddit is basiclly legit"
+	},
+	{
+		"rank_img": "./image/ranks/MM/suprime.png",
+		"rank_name": "Supreme Master First Class",
+		"rank_funny_descript": "Your parents must be proud"
+	},
+	{
+		"rank_img": "./image/ranks/MM/ge.png",
+		"rank_name": "The Global Elite",
+		"rank_funny_descript": "...and yet you're still nothing outside of MM"
+	},
+	
+	
+]
