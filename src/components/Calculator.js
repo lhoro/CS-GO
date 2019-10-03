@@ -289,13 +289,18 @@ class Calculator extends React.Component {
      return(
     <div className= "Calculator" >
       <button className="Calculator-Back" onClick={()=>move()}>BACK</button>
+      
       <div className="Calculator-Form-Box">
-
+      
           <select className="Calculator-Valute-Choise" onChange ={this.changeValute.bind(this)}>
             <option>PLN</option>
             <option>EUR</option>
             <option>USD</option>
-          </select>
+          </select><br/>
+          <div className="Calculator-Title-Box">
+          <h2>CALCULATOR</h2>
+          </div>
+
 
           <div className="Calculator-Form">
             <span  className="Calculator-Form-Span">SKIN NAME</span>

@@ -272,3 +272,7 @@ height:10%;
 margin-left:50%;
 transform:translate(-50%);
 }
+.Calculator-Title-Box{
+width:100%;
+text-align:center;
+}
