@@ -5,11 +5,91 @@
   padding: 0px;
   width:100vw;
   height:100vh;
-  background-color: aquamarine;
+  background-color: rgb(31, 31, 31);
+  text-align:center;
 }
 
 .Ranks-Back{
   position: absolute;
   top: 90vh;
   left: 150vw;
+}
+.Ranks-Box-Title{
+  text-align:center;
+  margin-top:0px;
+  margin-bottom:40px;
+}
+
+.Ranks-AllTable-Box{
+margin: 0px auto;
+width:97%;
+
+}
+
+.Ranks-Table-Box{
+  width:33%;
+  float:left;
+  display:inline;
+  font-size:15px;
+  text-align:center;
+  overflow:scroll;
+  height: 90vh;
+  overflow-x:hidden;
+}
+
+.Ranks-Table-Title{
+  border:solid 1px;
+  margin:0px 0px 0px 0px;
+  padding: 5px 0px 10px 0px;
+  font-family: "Arial Black";
+}
+
+.Ranks-Table{
+  width:100%;
+}
+
+.Ranks table,
+.Ranks th,
+.Ranks td{
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.Ranks-LogoCS-IMG{
+  width:40%;
+  height:10%;
+  margin-left:50%;
+  transform:translate(-65%);
+  }
+  .Ranks-Box-Title{
+    font-familya: "Counter-Strike Regular";
+  }
+
+/* MM STYLES */
+.MM-Table-Box{
+  background: #2e2e2e;
+  margin-bottom:20px;
+}
+
+
+.img-MM-rank{
+width:128.8px;
+height:46.6px;
+}
+
+
+
+
+/* WINGMAN STYLES */
+.Wingman-Table-Box{
+  background: #202020;
+}
+
+
+/* DANGER ZONE STYLES */
+.DZ-Table-Box{
+  background: #2e2e2e
+}
+
+::-webkit-scrollbar {
+ background:#202020;
 }

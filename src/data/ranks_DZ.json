@@ -1,0 +1,77 @@
+﻿[
+	{
+		"rank_img": "./image/ranks/DZ/r1.png",
+		"rank_name": "Lab Rat I",
+		"rank_funny_descript": "Do you know the alpahbet?"
+	},
+	{
+		"rank_img": "./image/ranks/DZ/r2.png",
+		"rank_name": "Lab Rat II",
+		"rank_funny_descript": "First time touching PC?"
+	},
+	{
+		"rank_img": "./image/ranks/DZ/sh1.png",
+		"rank_name": "Sprinting Here I",
+		"rank_funny_descript": "Did you quit all games?"
+	},
+	{
+		"rank_img": "./image/ranks/DZ/sh2.png",
+		"rank_name": "Sprinting Here II",
+		"rank_funny_descript": "First time playing shooter game?"
+	},
+	{
+		"rank_img": "./image/ranks/DZ/ws1.png",
+		"rank_name": "Wild Scout I",
+		"rank_funny_descript": "Go play Call of Duty, this is not for you"
+	},
+	{
+		"rank_img": "./image/ranks/DZ/ws2.png",
+		"rank_name": "Wild Scout II",
+		"rank_funny_descript": "Bad internet/low fps?"
+	},
+	{
+		"rank_img": "./image/ranks/DZ/wse.png",
+		"rank_name": "Wild Scout Elite",
+		"rank_funny_descript": "you can't play, but you are also not a retard!"
+	},
+	{
+		"rank_img": "./image/ranks/DZ/hf1.png",
+		"rank_name": "Hunter Fox I",
+		"rank_funny_descript": "Not THAT bad!"
+	},
+	{
+		"rank_img": "./image/ranks/DZ/hf2.png",
+		"rank_name": "Hunter Fox II",
+		"rank_funny_descript": "Okay I guess?"
+	},
+	{
+		"rank_img": "./image/ranks/DZ/hf3.png",
+		"rank_name": "Hunter Fox III",
+		"rank_funny_descript": "You know the basics of the game!"
+	},
+	{
+		"rank_img": "./image/ranks/DZ/hfe.png",
+		"rank_name": "Hunter Fox Elite",
+		"rank_funny_descript": "You can call yourself and 'above the averge' player!"
+	},
+	{
+		"rank_img": "./image/ranks/DZ/tw.png",
+		"rank_name": "Timber Wolf",
+		"rank_funny_descript": "You can call yourself a good Counter-Strike Player'"
+	},
+	{
+		"rank_img": "./image/ranks/DZ/ew.png",
+		"rank_name": "Ember Wolf",
+		"rank_funny_descript": "Counter-Strike master!"
+	},
+	{
+		"rank_img": "./image/ranks/DZ/ww.png",
+		"rank_name": "Wildfire Wolf",
+		"rank_funny_descript": "WALL HACK !"
+	},
+	{
+		"rank_img": "./image/ranks/DZ/tha.png",
+		"rank_name": "The Howling Alpha",
+		"rank_funny_descript": "WALL + AIM HACKS!"
+	}
+]
