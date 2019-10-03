@@ -1,0 +1,93 @@
+﻿[
+	{
+		"rank_img": "./image/ranks/Wingman/s1.png",
+		"rank_name": "Silver I",
+		"rank_funny_descript": "Do you know the alpahbet?"
+	},
+	{
+		"rank_img": "./image/ranks/Wingman/s2.png",
+		"rank_name": "Silver II",
+		"rank_funny_descript": "First time touching PC?"
+	},
+	{
+		"rank_img": "./image/ranks/Wingman/s3.png",
+		"rank_name": "Silver III",
+		"rank_funny_descript": "Did you quit all games?"
+	},
+	{
+		"rank_img": "./image/ranks/Wingman/s4.png",
+		"rank_name": "Silver IV",
+		"rank_funny_descript": "First time playing shooter game?"
+	},
+	{
+		"rank_img": "./image/ranks/Wingman/s5.png",
+		"rank_name": "Silver Elite",
+		"rank_funny_descript": "Go play Call of Duty, this is not for you"
+	},
+	{
+		"rank_img": "./image/ranks/Wingman/s6.png",
+		"rank_name": "Silver Elite Master",
+		"rank_funny_descript": "Bad internet/low fps?"
+	},
+	{
+		"rank_img": "./image/ranks/Wingman/g1.png",
+		"rank_name": "Gold Nova I",
+		"rank_funny_descript": "you can't play, but you are also not a retard!"
+	},
+	{
+		"rank_img": "./image/ranks/Wingman/g2.png",
+		"rank_name": "Gold Nova II",
+		"rank_funny_descript": "Not THAT bad!"
+	},
+	{
+		"rank_img": "./image/ranks/Wingman/g3.png",
+		"rank_name": "Gold Nova III",
+		"rank_funny_descript": "Okay I guess?"
+	},
+	{
+		"rank_img": "./image/ranks/Wingman/g4.png",
+		"rank_name": "Gold Nova Master",
+		"rank_funny_descript": "You are getting used to it!"
+	},
+	{
+		"rank_img": "./image/ranks/Wingman/mg1.png",
+		"rank_name": "Master Guardian I",
+		"rank_funny_descript": "You know the basics of the game!"
+	},
+	{
+		"rank_img": "./image/ranks/Wingman/mg2.png",
+		"rank_name": "Master Guardian II",
+		"rank_funny_descript": "You can call yourself and 'above the averge' player!"
+	},
+	{
+		"rank_img": "./image/ranks/Wingman/mge.png",
+		"rank_name": "Master Guardian Elite",
+		"rank_funny_descript": "You can call yourself a good Counter-Strike Player'"
+	},
+	{
+		"rank_img": "./image/ranks/Wingman/dmg.png",
+		"rank_name": "Distinguished Master Guardian",
+		"rank_funny_descript": "Counter-Strike master!"
+	},
+	{
+		"rank_img": "./image/ranks/Wingman/le.png",
+		"rank_name": "Legendary Eagle",
+		"rank_funny_descript": "WALL HACK !"
+	},
+	{
+		"rank_img": "./image/ranks/Wingman/lem.png",
+		"rank_name": "Legendary Eagle Master",
+		"rank_funny_descript": "WALL + AIM HACKS!"
+	},
+	{
+		"rank_img": "./image/ranks/Wingman/suprime.png",
+		"rank_name": "Supreme Master First Class",
+		"rank_funny_descript": "COLLECTION OF HACKS OWNER!"
+	},
+	{
+		"rank_img": "./image/ranks/Wingman/ge.png",
+		"rank_name": "The Global Elite",
+		"rank_funny_descript": "PREMIUM HACKs 20$/gla1ve with the whole Astralis team"
+	}
+	
+]

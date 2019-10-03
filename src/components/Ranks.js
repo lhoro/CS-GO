@@ -1,6 +1,8 @@
 import React from 'react';
 import './style/Ranks.css';
-
+import ranks_MM from "../data/ranks_MM.json";
+import ranks_Wingman from "../data/ranks_Wingman.json";
+import ranks_DZ from "../data/ranks_DZ.json";
 import { move } from './Service';
 
 function Ranks() {
@@ -17,11 +19,16 @@ function Ranks() {
                 <th>RANK NAME</th>
                 <th>RANK FUNNY DESCRIPTION</th>
               </tr>
-              <tr>
-                <td>OBRAZEK</td>
-                <td> NAZWA RANGI</td>
-                <td> NOOB PLAYER</td>
-              </tr>
+              
+                {ranks_MM.map(event=>{
+                  return(
+                    <tr>
+                      <td><img className="img-MM-rank" src={event.rank_img}/></td>
+                      <td> {event.rank_name}</td>
+                      <td> {event.rank_funny_descript}</td>
+                    </tr>
+                  )
+                })} 
             </tbody>
           </table>
         </div>
@@ -35,11 +42,15 @@ function Ranks() {
                 <th>RANK NAME</th>
                 <th>RANK FUNNY DESCRIPTION</th>
               </tr>
-              <tr>
-                <td>OBRAZEK</td>
-                <td> NAZWA RANGI</td>
-                <td> NOOB PLAYER</td>
-              </tr>
+              {ranks_Wingman.map(event=>{
+                  return(
+                    <tr>
+                      <td><img src={event.rank_img}/></td>
+                      <td> {event.rank_name}</td>
+                      <td> {event.rank_funny_descript}</td>
+                    </tr>
+                  )
+                })}   
             </tbody>
           </table>
         </div>
@@ -53,15 +64,20 @@ function Ranks() {
                 <th>RANK NAME</th>
                 <th>RANK FUNNY DESCRIPTION</th>
               </tr>
-              <tr>
-                <td>OBRAZEK</td>
-                <td> NAZWA RANGI</td>
-                <td> NOOB PLAYER</td>
-              </tr>
+              {ranks_DZ.map(event=>{
+                  return(
+                    <tr>
+                      <td><img className="img-MM-rank" src={event.rank_img}/></td>
+                      <td> {event.rank_name}</td>
+                      <td> {event.rank_funny_descript}</td>
+                    </tr>
+                  )
+                })} 
             </tbody>
           </table>
         </div>
       </div>
+     
       <button className="Ranks-Back" onClick={()=>move()}>BACK</button>
     </div>
   );

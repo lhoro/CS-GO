@@ -6,8 +6,7 @@
   width:100vw;
   height:100vh;
   background-color: rgb(31, 31, 31);
- text-align:center;
-
+  text-align:center;
 }
 
 .Ranks-Back{
@@ -23,7 +22,8 @@
 
 .Ranks-AllTable-Box{
 margin: 0px auto;
-width:97%
+width:97%;
+
 }
 
 .Ranks-Table-Box{
@@ -32,6 +32,9 @@ width:97%
   display:inline;
   font-size:15px;
   text-align:center;
+  overflow:scroll;
+  height: 90vh;
+  overflow-x:hidden;
 }
 
 .Ranks-Table-Title{
@@ -54,7 +57,14 @@ width:97%
 
 /* MM STYLES */
 .MM-Table-Box{
-  background: #2e2e2e
+  background: #2e2e2e;
+  margin-bottom:20px;
+}
+
+
+.img-MM-rank{
+width:128.8px;
+height:46.6px;
 }
 
 
@@ -67,4 +77,8 @@ width:97%
 /* DANGER ZONE STYLES */
 .DZ-Table-Box{
   background: #2e2e2e
+}
+
+::-webkit-scrollbar {
+ background:#202020;
 }
