@@ -32,7 +32,6 @@ function App() {
           </tr>
         </tbody>
       </table>
-      <Footer />
       <audio controls autoPlay className="Player" />
     </div>
   );

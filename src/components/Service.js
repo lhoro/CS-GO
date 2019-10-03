@@ -35,3 +35,44 @@ export const move = (dir) =>{
   window.scrollTo(w, h); 
   return 0;
 }
+
+export const coin_flip = ()=>{
+  const coins = document.querySelector(".Coins");
+  if(coins.classList.value.indexOf("Block")<0){
+    coins.classList.add("Block");
+    setTimeout(()=>{
+      const coins = document.querySelector(".Coins");
+      let anim = "Anim-Play";
+      
+      if(coins.classList.value.indexOf("Play2")<0){
+        let random = (Math.random());
+        if(random>0.4)
+          anim = "Anim-Play2";
+      }else{
+        anim = "Anim2-Play";
+        let random = (Math.random());
+        if(random>0.4)
+          anim = "Anim2-Play2";
+      }
+      
+      const coin1 = document.querySelector(".Side1");
+      if(coin1.classList.value.indexOf("CTT")>-1){
+        coin1.classList.add("CT");
+        coin1.classList.remove("CTT");
+        console.log("kk")
+      }
+
+      coins.classList.remove("Anim-Play");
+      coins.classList.remove("Anim-Play2");
+      coins.classList.remove("Anim2-Play");
+      coins.classList.remove("Anim2-Play2");
+      coins.classList.add(anim);
+
+      setTimeout(()=>{
+        const coins = document.querySelector(".Coins");
+        coins.classList.remove("Block");
+      },5000)
+
+    }, 500);
+  }
+}

@@ -1,58 +1,161 @@
 @import "colors.css";
 
+/* animacje */
 @keyframes coin_flip {
-  0% {
-    transform:rotateY(0deg)
-  }
-  80% {
-    transform:rotateY(2500deg);
-  }
-  90% {
-    transform:rotateY(3300deg);
-  }
-  95% {
-    transform:rotateY(3500deg);
-  }
-  100% {
-    transform:rotateY(3600deg);
-  }
+  from {transform:rotateY(0deg)}
+  to {transform:rotateY(3600deg);}
 }
 
+@keyframes coin_flip2 {
+  from{transform:rotateY(0deg)}
+  to{transform:rotateY(3780deg);}
+}
+
+@keyframes coin_flip3 {
+  from {transform:rotateY(180deg)}
+  to {transform:rotateY(3600deg);}
+}
+
+@keyframes coin_flip4 {
+  from{transform:rotateY(180deg)}
+  to{transform:rotateY(3780deg);}
+}
+
+.Anim-Play{
+  animation: coin_flip 3s ease-out forwards;
+} 
+
+.Anim-Play2{
+  animation: coin_flip2 3s ease-out forwards;
+} 
+
+.Anim2-Play{
+  animation: coin_flip3 3s ease-out forwards;
+} 
+
+.Anim2-Play2{
+  animation: coin_flip4 3s ease-out forwards;
+} 
+
+.Block{
+  
+}
+
+
+/* homepage */
 .Homepage{
   margin: 0px auto;
   width:100vw;
   height:100vh;
-  background-color: bisque;
+  background-color: var(--background-color);
+}
+
+.Circle{
+  position:absolute;
+  top: 150vh;
+  left: 150vw;
+  width: 300px;
+  height:300px;
+  transform:  translate(-50%,-50%)
+              scale(2.0);
+  background-color: var(--background-color);
+  border-radius: 50%;
+  z-index: 99;
 }
 
 .Animation-Box {
+  position:absolute;
   width:256px;
   height:256px;
-  
+  top: 150vh;
+  left: 150vw;
+  perspective:500px;
+  -webkit-perspective:500px;
+  transform:  translate(-50%,-50%)
+              scale(2.0);
+  z-index: 100;
 }
+
 
 .Coins {
   position:relative;
   width:100%;
   height:100%;
+  text-align:center;
   transform-style:preserve-3d;
-  animation: coin_flip 5s ;
+  -webkit-transform-style:preserve-3d;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.CT {
+.Side1 {
   position:absolute;
   width:100%;
   height:100%;
-  background: url('/image/coins/ct.png') no-repeat;
+  border-radius: 50%;
   background-size:100%;
   backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
 }
 
-.TT {
+.Side2{
   position:absolute;
   width:100%;
   height:100%;
-  background: url('/image/coins/tt.png') no-repeat;
+  z-index: 100;
+  line-height:256px;
+  border-radius: 50%;
   transform:rotateY(180deg);
+  -webkit-transform:rotateY(180deg);
   backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
 }
+
+.CT{
+  background: url('/image/coins/ct.png') no-repeat;
+  border-radius: 50%;
+}
+
+.TT{
+  background: url('/image/coins/tt.png') no-repeat;
+  border-radius: 50%;
+}
+
+.CTT{
+  background: url('/image/coins/both.png') no-repeat;
+  border-radius: 50%;
+}
+
+.Homepage .Image{
+  position:absolute;
+  width: 47.5vw;
+  height: 45vh;
+}
+
+.Homepage .Image1{
+  background-color: blue;
+  top: 100vh;
+  left: 100vw;
+}
+
+.Homepage .Image2{
+  background-color: aqua;
+  top: 200vh;
+  left: 100vw;
+  transform: translateY(-100%);
+}
+
+.Homepage .Image3{
+  background-color: lightblue;
+  top: 100vh;
+  left: 200vw;
+  transform: translateX(-100%);
+}
+
+.Homepage .Image4{
+  background-color: lightskyblue;
+  top: 200vh;
+  left: 200vw;
+  transform: translate(-100%, -100%)
+}
+
