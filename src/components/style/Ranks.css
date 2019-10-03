@@ -60,6 +60,9 @@ width:97%;
   margin-left:50%;
   transform:translate(-65%);
   }
+  .Ranks-Box-Title{
+    font-familya: "Counter-Strike Regular";
+  }
 
 /* MM STYLES */
 .MM-Table-Box{
