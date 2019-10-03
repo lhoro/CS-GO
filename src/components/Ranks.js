@@ -8,7 +8,8 @@ import { move } from './Service';
 function Ranks() {
   return (
     <div className="Ranks">
-      <h1 className="Ranks-Box-Title">RANKS IN CS GO </h1>
+      <img src="/image/layout/logo.png"  className="Ranks-LogoCS-IMG" alt="we lost this img"/>
+      <p className="Ranks-Box-Title">RANKS</p>
       <div className="Ranks-AllTable-Box">
         <div className="Ranks-Table-Box MM-Table-Box">
           <p className="Ranks-Table-Title MM-Title">MATCH MAKING</p>
@@ -23,7 +24,7 @@ function Ranks() {
                 {ranks_MM.map(event=>{
                   return(
                     <tr>
-                      <td><img className="img-MM-rank" src={event.rank_img}/></td>
+                      <td><img className="img-MM-rank" src={event.rank_img} alt="we lost this img"/></td>
                       <td> {event.rank_name}</td>
                       <td> {event.rank_funny_descript}</td>
                     </tr>
@@ -45,7 +46,7 @@ function Ranks() {
               {ranks_Wingman.map(event=>{
                   return(
                     <tr>
-                      <td><img src={event.rank_img}/></td>
+                      <td><img src={event.rank_img} alt="we lost this img"/></td>
                       <td> {event.rank_name}</td>
                       <td> {event.rank_funny_descript}</td>
                     </tr>
@@ -67,7 +68,7 @@ function Ranks() {
               {ranks_DZ.map(event=>{
                   return(
                     <tr>
-                      <td><img className="img-MM-rank" src={event.rank_img}/></td>
+                      <td><img className="img-MM-rank" src={event.rank_img} alt="we lost this img"/></td>
                       <td> {event.rank_name}</td>
                       <td> {event.rank_funny_descript}</td>
                     </tr>

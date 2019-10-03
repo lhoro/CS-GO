@@ -54,6 +54,12 @@ width:97%;
   border: 1px solid rgb(255, 255, 255);
 }
 
+.Ranks-LogoCS-IMG{
+  width:40%;
+  height:10%;
+  margin-left:50%;
+  transform:translate(-65%);
+  }
 
 /* MM STYLES */
 .MM-Table-Box{
@@ -71,7 +77,9 @@ height:46.6px;
 
 
 /* WINGMAN STYLES */
-
+.Wingman-Table-Box{
+  background: #202020;
+}
 
 
 /* DANGER ZONE STYLES */
