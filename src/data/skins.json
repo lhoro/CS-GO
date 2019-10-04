@@ -62,7 +62,7 @@
 		"cost_field": "3.07",
 		"cost_wellworm": "3.53",
 		"cost_battle": "3.09"
-	}
+	},
 	{
 		"name_weapon": "Desert Eagle",
 		"name_skin": "Code Red",
@@ -78,5 +78,21 @@
 		"cost_field": "18.29",
 		"cost_wellworm": "15.37",
 		"cost_battle": "12.83"
+	},
+	{
+		"name_weapon": "USP-S",
+		"name_skin": "Cortex",
+		"collection": "The Clutch Collection",
+		"case_collection": "Clutch Case",
+		"st_cost_factory": "66.75",
+		"st_cost_minimal": "28.99",
+		"st_cost_field": "17.06",
+		"st_cost_wellworm": "13.50",
+		"st_cost_battle": "11.92",
+		"cost_factory": "17.97",
+		"cost_minimal": "8.93",
+		"cost_field": "5.61",
+		"cost_wellworm": "4.84",
+		"cost_battle": "4.45"
 	}
 ]
