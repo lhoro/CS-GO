@@ -133,29 +133,75 @@
 }
 
 .Homepage .Image1{
-  background-color: blue;
+  background: url('/image/layout/image1.jpg') no-repeat;
+  background-size: cover;
   top: 100vh;
   left: 100vw;
 }
 
 .Homepage .Image2{
-  background-color: aqua;
+  background: url('/image/layout/image2.jpg') no-repeat;
+  background-size: cover;
   top: 200vh;
   left: 100vw;
   transform: translateY(-100%);
 }
 
 .Homepage .Image3{
-  background-color: lightblue;
+  background: url('/image/layout/image3.jpg') no-repeat;
+  background-size: cover;
   top: 100vh;
   left: 200vw;
   transform: translateX(-100%);
 }
 
 .Homepage .Image4{
-  background-color: lightskyblue;
+  background: url('/image/layout/image4.jpg') no-repeat;
+  background-size: cover;
   top: 200vh;
   left: 200vw;
   transform: translate(-100%, -100%)
 }
 
+.Arrow-Up{
+  position: absolute;
+  width: 2vw;
+  height: 16vh;
+  left: 150vw;
+  top: 150vh;
+  transform: translate(-50% ,-50vh);
+  z-index: 1000;
+}
+
+.Arrow-Down{
+  position: absolute;
+  width: 2vw;
+  height: 16vh;
+  left: 150vw;
+  top: 150vh;
+  transform: translate(-50% ,34vh);
+  z-index: 1000;
+}
+
+
+.Arrow-Left{
+  position: absolute;
+  width: 16vw;
+  height: 4vh;
+  left: 150vw;
+  top: 150vh;
+  transform-origin: left 2vh;
+  transform: translate(-200% ,-50%);
+  z-index: 1000;
+}
+
+.Arrow-Right{
+  position: absolute;
+  width: 16vw;
+  height: 4vh;
+  left: 150vw;
+  top: 150vh;
+  transform: translate(100% ,-50%);
+  transform-origin: left 2vh;
+  z-index: 1000;
+}

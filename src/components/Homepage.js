@@ -17,10 +17,10 @@ function Homepage() {
           <div className="Side2 TT"></div>
         </div>
       </div>
-      <button onClick={()=>move("up")} >UP</button>
-      <button onClick={()=>move("down")} >DOWN</button>
-      <button onClick={()=>move("left")} >LEFT</button>
-      <button onClick={()=>move("right")} >RIGHT</button>
+      <img src="/image/layout/arrowup.png" className="Arrow-Up" alt="arrow" onClick={()=>move("up")} />
+      <img src="/image/layout/arrowdown.png" className="Arrow-Down" alt="arrow" onClick={()=>move("down")} />
+      <img src="/image/layout/arrowleft.png" className="Arrow-Left" alt="arrow" onClick={()=>move("left")} />
+      <img src="/image/layout/arrowright.png" className="Arrow-Right" alt="arrow" onClick={()=>move("right")} />
     </div>
   );
 }
