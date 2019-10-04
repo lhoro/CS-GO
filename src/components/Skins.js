@@ -14,14 +14,14 @@ function Skins() {
       <div className="Skins-Body">
       {skins.map((event,index)=>{
         return(
-        <>
-          <div className="Skins-img&float">
+        <div key={index} >
+          <div className="Skins-img&float" >
             <p>{event.name_weapon} | {event.name_skin}</p>
           </div>
           <div className="Skins-cost&float">
 
           </div>
-        </>
+        </div>
         )
       })}
       </div>
