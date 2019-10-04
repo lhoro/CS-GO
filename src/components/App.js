@@ -14,10 +14,7 @@ class App extends React.Component {
 
   componentDidMount(){
     const hp = document.querySelector(".Homepage");
-    window.scrollTo(hp.offsetWidth,hp.offsetHeight)
-    // const html = document.querySelector("html");
-    // html.style = "scroll-behavior: smooth;";
-    // console.log(html)
+    window.scrollTo(hp.offsetWidth,hp.offsetHeight);
   }
   
   render(){
