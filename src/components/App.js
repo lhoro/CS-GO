@@ -14,7 +14,7 @@ class App extends React.Component {
 
   componentDidMount(){
     const hp = document.querySelector(".Homepage");
-    window.scrollTo(hp.offsetWidth,hp.offsetHeight)
+    window.scrollTo(hp.offsetWidth,hp.offsetHeight);
   }
   
   render(){
