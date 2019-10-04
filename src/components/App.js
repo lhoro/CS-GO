@@ -10,13 +10,11 @@ import Ranks from "./Ranks";
 
 
 class App extends React.Component {
-  constructor(props){
-    super(props);
 
-  }
 
   componentDidMount(){
-    window.scroll(100,100)
+    const hp = document.querySelector(".Homepage");
+    window.scrollTo(hp.offsetWidth,hp.offsetHeight)
   }
   
   render(){
