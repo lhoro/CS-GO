@@ -21,9 +21,9 @@ function Ranks() {
                 <th>RANK FUNNY DESCRIPTION</th>
               </tr>
               
-                {ranks_MM.map(event=>{
+                {ranks_MM.map((event,index)=>{
                   return(
-                    <tr>
+                    <tr key={index}>
                       <td><img className="img-MM-rank" src={event.rank_img} alt="we lost this img"/></td>
                       <td> {event.rank_name}</td>
                       <td> {event.rank_funny_descript}</td>
@@ -43,9 +43,9 @@ function Ranks() {
                 <th>RANK NAME</th>
                 <th>RANK FUNNY DESCRIPTION</th>
               </tr>
-              {ranks_Wingman.map(event=>{
+              {ranks_Wingman.map((event,index)=>{
                   return(
-                    <tr>
+                    <tr key={index}>
                       <td><img src={event.rank_img} alt="we lost this img"/></td>
                       <td> {event.rank_name}</td>
                       <td> {event.rank_funny_descript}</td>
@@ -65,9 +65,9 @@ function Ranks() {
                 <th>RANK NAME</th>
                 <th>RANK FUNNY DESCRIPTION</th>
               </tr>
-              {ranks_DZ.map(event=>{
+              {ranks_DZ.map((event,index)=>{
                   return(
-                    <tr>
+                    <tr key={index}>
                       <td><img className="img-MM-rank" src={event.rank_img} alt="we lost this img"/></td>
                       <td> {event.rank_name}</td>
                       <td> {event.rank_funny_descript}</td>
