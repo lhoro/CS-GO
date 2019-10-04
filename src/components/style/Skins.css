@@ -1,15 +1,26 @@
 @import "colors.css";
 
+h2{
+  margin-top:0px;
+}
 .Skins{
   margin: 0px auto;
   padding: 0px;
-  width:100vw;
+  width:110vw;
   height:100vh;
   background-color: blueviolet;
+  /* margin-top:-6vh; */
 }
 
 .Skins-Back{
   position: absolute;
   top: 150vh;
   left: 205vw;
+}
+.Skins-Title{
+  text-align:center;
+  background:rgb(0, 63, 0);
+}
+.Skins-Body{
+  background:rgb(0, 0, 51);
 }

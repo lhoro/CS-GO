@@ -23,7 +23,7 @@ export const move = (dir) =>{
   }
 
   if(dir==="right"){
-    window.scrollTo(2*w, h); 
+    window.scrollTo(2*w+5, h); 
     return 0;
   }
 
