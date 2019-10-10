@@ -1,5 +1,6 @@
 ﻿[
 	{
+		"type": "Rifle",
 		"name": "AK-47",
 		"img": "./image/weapons/ak47.png",
 		"sound": "./sounds/ak47.wav",
@@ -27,6 +28,7 @@
 		"spread_crouch": "4.81"
 	},
 	{
+		"type": "Rifle",
 		"name": "AUG",
 		"img": "./image/weapons/aug.png",
 		"sound": "./sounds/aug.wav",
@@ -54,10 +56,11 @@
 		"spread_crouch": "2.88"
 	},
 	{
+		"type": "Rifle",
 		"name": "AWP",
 		"img": "./image/weapons/awp.png",
 		"sound": "./sounds/awp.wav",
-		"team": "TT",
+		"team": "CT/TT",
 		"cost": "$4750",
 		"kill_award": "$100",
 		"kills_to_rebuy": "47.5",
@@ -81,10 +84,11 @@
 		"spread_crouch": "60.60"
 	},
 	{
+		"type": "Pistol",
 		"name": "CZ75 Auto",
 		"img": "./image/weapons/cz.png",
 		"sound": "./sounds/cz.wav",
-		"team": "TT",
+		"team": "CT/TT",
 		"cost": "$500",
 		"kill_award": "$300",
 		"kills_to_rebuy": "1.67",
@@ -108,10 +112,11 @@
 		"spread_crouch": "7.60"
 	},
 	{
+		"type": "Pistol",
 		"name": "Desert Eagle",
 		"img": "./image/weapons/deagle.png",
 		"sound": "./sounds/deagle.wav",
-		"team": "TT",
+		"team": "CT/TT",
 		"cost": "$700",
 		"kill_award": "$300",
 		"kills_to_rebuy": "2.33",
@@ -135,10 +140,11 @@
 		"spread_crouch": "2.18"
 	},
 	{
+		"type": "Pistol",
 		"name": "Dual Berettas",
 		"img": "./image/weapons/berettas.png",
 		"sound": "./sounds/berettas.wav",
-		"team": "TT",
+		"team": "CT/TT",
 		"cost": "$500",
 		"kill_award": "$300",
 		"kills_to_rebuy": "1.67",
@@ -162,6 +168,7 @@
 		"spread_crouch": "5.25"
 	},
 	{
+		"type": "Rifle",
 		"name": "FAMAS",
 		"img": "./image/weapons/famas.png",
 		"sound": "./sounds/famas.wav",
@@ -189,6 +196,7 @@
 		"spread_crouch": "7.39"
 	},
 	{
+		"type": "Pistol",
 		"name": "Five-SeveN",
 		"img": "./image/weapons/57.png",
 		"sound": "./sounds/57.wav",
@@ -216,6 +224,7 @@
 		"spread_crouch": "6.83"
 	},
 	{
+		"type": "Rifle",
 		"name": "G3SG1",
 		"img": "./image/weapons/g3sg1.png",
 		"sound": "./sounds/g3sg1.wav",
@@ -243,6 +252,7 @@
 		"spread_crouch": "19.35"
 	},
 	{
+		"type": "Rifle",
 		"name": "Galil AR",
 		"img": "./image/weapons/gail.png",
 		"sound": "./sounds/gail.wav",
@@ -270,6 +280,7 @@
 		"spread_crouch": "6.58"
 	},
 	{
+		"type": "Pistol",
 		"name": "Glock 18",
 		"img": "./image/weapons/glock.png",
 		"sound": "./sounds/glock.wav",
@@ -297,10 +308,11 @@
 		"spread_crouch": "4.20"
 	},
 	{
+		"type": "Heavy",
 		"name": "M249",
 		"img": "./image/weapons/m249.png",
 		"sound": "./sounds/m249.wav",
-		"team": "TT",
+		"team": "CT/TT",
 		"cost": "$5200",
 		"kill_award": "$300",
 		"kills_to_rebuy": "17.33",
@@ -324,6 +336,7 @@
 		"spread_crouch": "5.34"
 	},
 	{
+		"type": "Rifle",
 		"name": "M4A4",
 		"img": "./image/weapons/m4a4.png",
 		"sound": "./sounds/m4a4.wav",
@@ -351,6 +364,7 @@
 		"spread_crouch": "3.68"
 	},
 	{
+		"type": "Rifle",
 		"name": "M4A4-S",
 		"img": "./image/weapons/m4a1s.png",
 		"sound": "./sounds/m4a1s.wav",
@@ -378,6 +392,7 @@
 		"spread_crouch": "3.68"
 	},
 	{
+		"type": "SMG",
 		"name": "MAC-10",
 		"img": "./image/weapons/mac10.png",
 		"sound": "./sounds/mac10.wav",
@@ -405,6 +420,7 @@
 		"spread_crouch": "9.98"
 	},
 	{
+		"type": "Heavy",
 		"name": "MAG-7",
 		"img": "./image/weapons/mag7.png",
 		"sound": "./sounds/mag7.wav",
@@ -432,10 +448,11 @@
 		"spread_crouch": "5.25"
 	},
 	{
+		"type": "SMG",
 		"name": "MP7",
 		"img": "./image/weapons/mp7.png",
 		"sound": "./sounds/mp7.wav",
-		"team": "TT",
+		"team": "CT/TT",
 		"cost": "$1700",
 		"kill_award": "$600",
 		"kills_to_rebuy": "2.83",
@@ -459,6 +476,7 @@
 		"spread_crouch": "8.92"
 	},
 	{
+		"type": "SMG",
 		"name": "MP9",
 		"img": "./image/weapons/mp9.png",
 		"sound": "./sounds/mp9.wav",
@@ -486,10 +504,11 @@
 		"spread_crouch": "10.50"
 	},
 	{
+		"type": "Heavy",
 		"name": "Negev",
 		"img": "./image/weapons/negev.png",
 		"sound": "./sounds/negev.wav",
-		"team": "TT",
+		"team": "CT/TT",
 		"cost": "$5700",
 		"kill_award": "$300",
 		"kills_to_rebuy": "19",
@@ -513,10 +532,11 @@
 		"spread_crouch": "7.63"
 	},
 	{
+		"type": "Heavy",
 		"name": "Nova",
 		"img": "./image/weapons/nova.png",
 		"sound": "./sounds/nova.wav",
-		"team": "TT",
+		"team": "CT/TT",
 		"cost": "$1200",
 		"kill_award": "$900",
 		"kills_to_rebuy": "1.33",
@@ -540,6 +560,7 @@
 		"spread_crouch": "5.25"
 	},
 	{
+		"type": "Pistol",
 		"name": "P2000",
 		"img": "./image/weapons/p2k.png",
 		"sound": "./sounds/p2k.wav",
@@ -567,10 +588,11 @@
 		"spread_crouch": "3.68"
 	},
 	{
+		"type": "Pistol",
 		"name": "P250",
 		"img": "./image/weapons/p250.png",
 		"sound": "./sounds/p250.wav",
-		"team": "TT",
+		"team": "CT/TT",
 		"cost": "$300",
 		"kill_award": "$300",
 		"kills_to_rebuy": "1",
@@ -594,10 +616,11 @@
 		"spread_crouch": "6.83"
 	},
 	{
+		"type": "SMG",
 		"name": "P90",
 		"img": "./image/weapons/p90.png",
 		"sound": "./sounds/p90.wav",
-		"team": "TT",
+		"team": "CT/TT",
 		"cost": "$2350",
 		"kill_award": "$300",
 		"kills_to_rebuy": "7.83",
@@ -621,10 +644,11 @@
 		"spread_crouch": "10.24"
 	},
 	{
+		"type": "SMG",
 		"name": "PP-Bizon",
 		"img": "./image/weapons/bizon.png",
 		"sound": "./sounds/bizon.wav",
-		"team": "TT",
+		"team": "CT/TT",
 		"cost": "$1400",
 		"kill_award": "$600",
 		"kills_to_rebuy": "2.33",
@@ -648,6 +672,7 @@
 		"spread_crouch": "10.50"
 	},
 	{
+		"type": "Heavy",
 		"name": "Sawed-Off",
 		"img": "./image/weapons/sawed.png",
 		"sound": "./sounds/sawed.wav",
@@ -675,6 +700,7 @@
 		"spread_crouch": "5.25"
 	},
 	{
+		"type": "Rifle",
 		"name": "SCAR-20",
 		"img": "./image/weapons/scar.png",
 		"sound": "./sounds/scar.wav",
@@ -702,6 +728,7 @@
 		"spread_crouch": "19.35"
 	},
 	{
+		"type": "Rifle",
 		"name": "SG 553",
 		"img": "./image/weapons/sg.png",
 		"sound": "./sounds/sg.wav",
@@ -729,10 +756,11 @@
 		"spread_crouch": "2.84"
 	},
 	{
+		"type": "Rifle",
 		"name": "SSG 08",
 		"img": "./image/weapons/scout.png",
 		"sound": "./sounds/scout.wav",
-		"team": "TT",
+		"team": "CT/TT",
 		"cost": "$1700",
 		"kill_award": "$300",
 		"kills_to_rebuy": "5.67",
@@ -756,6 +784,7 @@
 		"spread_crouch": "23.78"
 	},
 	{
+		"type": "Pistol",
 		"name": "Tec-9",
 		"img": "./image/weapons/tec9.png",
 		"sound": "./sounds/tec.wav",
@@ -783,10 +812,11 @@
 		"spread_crouch": "7.57"
 	},
 	{
+		"type": "SMG",
 		"name": "UMP-45",
 		"img": "./image/weapons/ump45.png",
 		"sound": "./sounds/ump.wav",
-		"team": "TT",
+		"team": "CT/TT",
 		"cost": "$1200",
 		"kill_award": "$600",
 		"kills_to_rebuy": "2",
@@ -810,6 +840,7 @@
 		"spread_crouch": "10.07"
 	},
 	{
+		"type": "Pistol",
 		"name": "USP-S",
 		"img": "./image/weapons/usps.png",
 		"sound": "./sounds/usps.wav",
@@ -837,10 +868,11 @@
 		"spread_crouch": "3.68"
 	},
 	{
+		"type": "Heavy",
 		"name": "XM1014",
 		"img": "./image/weapons/xm1014.png",
 		"sound": "./sounds/xm.wav",
-		"team": "TT",
+		"team": "CT/TT",
 		"cost": "$2000",
 		"kill_award": "$900",
 		"kills_to_rebuy": "2.22",

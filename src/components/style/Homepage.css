@@ -165,8 +165,8 @@
 
 .Arrow-Up{
   position: absolute;
-  width: 2vw;
-  height: 16vh;
+  width: 40px;
+  height: 160px;
   left: 150vw;
   top: 150vh;
   transform: translate(-50% ,-50vh);
@@ -175,8 +175,8 @@
 
 .Arrow-Down{
   position: absolute;
-  width: 2vw;
-  height: 16vh;
+  width: 40px;
+  height: 160px;
   left: 150vw;
   top: 150vh;
   transform: translate(-50% ,34vh);
