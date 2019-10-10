@@ -1,6 +1,6 @@
 import React from 'react';
 import './style/Calculator.css';
-
+import Valute from './Valute.js'
 import { move } from './Service'
 
 class Calculator extends React.Component {
@@ -15,7 +15,7 @@ class Calculator extends React.Component {
         item: [],
         summary: 0,
         actualyLength : 0,
-        valute: 'PLN',
+        valute: 'USD',
         error: ''
       }
   }
@@ -157,10 +157,10 @@ class Calculator extends React.Component {
    }
   }
 
-  changeValute = (e) =>{
+  changeValute = (PLN_EUR,PLN_USD,EUR_USD,e) =>{
     const actualyValute = e.currentTarget.value
     if(this.state.valute==="PLN" && actualyValute === 'EUR'){
-      const cost = document.querySelector('#cost').value/4.38
+      const cost = document.querySelector('#cost').value/PLN_EUR
       if(cost >0 || this.state.item.length > 0 ){
       document.querySelector('#cost').value =  cost
       this.state.item.map(event =>{
@@ -171,7 +171,7 @@ class Calculator extends React.Component {
 
     }
     }else if (this.state.valute==="EUR" && actualyValute === 'PLN'){
-      const cost = document.querySelector('#cost').value*4.38
+      const cost = document.querySelector('#cost').value*PLN_EUR
       if(cost >0 || this.state.item.length > 0 ){
         document.querySelector('#cost').value =  cost
         this.state.item.map(event =>{
@@ -181,7 +181,7 @@ class Calculator extends React.Component {
        })
       }
     }else if (this.state.valute==="PLN" && actualyValute === 'USD'){
-      const cost = document.querySelector('#cost').value/4.006
+      const cost = document.querySelector('#cost').value/PLN_USD
       if(cost >0 || this.state.item.length > 0 ){
       document.querySelector('#cost').value =  cost
       this.state.item.map(event =>{
@@ -191,7 +191,7 @@ class Calculator extends React.Component {
      })
     }
     }else if (this.state.valute==="USD" && actualyValute === 'PLN'){
-      const cost = document.querySelector('#cost').value*4.006
+      const cost = document.querySelector('#cost').value*PLN_USD
       if(cost >0 || this.state.item.length > 0 ){
       document.querySelector('#cost').value =  cost
       this.state.item.map(event =>{
@@ -201,7 +201,7 @@ class Calculator extends React.Component {
      })
     }
     }else if (this.state.valute==="USD" && actualyValute === 'EUR'){
-      const cost = document.querySelector('#cost').value/1.093
+      const cost = document.querySelector('#cost').value/EUR_USD
       if(cost >0 || this.state.item.length > 0 ){
       document.querySelector('#cost').value =  cost
       this.state.item.map(event =>{
@@ -211,7 +211,7 @@ class Calculator extends React.Component {
      })
     }
     }else if (this.state.valute==="EUR" && actualyValute === 'USD'){
-      const cost = document.querySelector('#cost').value*1.093
+      const cost = document.querySelector('#cost').value*EUR_USD
       if(cost >0 || this.state.item.length > 0 ){
       document.querySelector('#cost').value =  cost
       this.state.item.map(event =>{
@@ -292,11 +292,7 @@ class Calculator extends React.Component {
       
       <div className="Calculator-Form-Box">
       
-          <select className="Calculator-Valute-Choise" onChange ={this.changeValute.bind(this)}>
-            <option>PLN</option>
-            <option>EUR</option>
-            <option>USD</option>
-          </select><br/>
+      <Valute changeValute={this.changeValute.bind(this)} fromValute="Calculator-Valute" />
           <div className="Calculator-Title-Box">
           <h2>CALCULATOR</h2>
           </div>

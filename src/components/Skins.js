@@ -12,7 +12,7 @@ class Skins extends React.Component {
     this.state ={
       skins:[],
       searchValue:"",
-      valute: "EUR",
+      valute: "USD",
     }
 }
 componentDidMount(){
@@ -29,13 +29,128 @@ componentDidMount(){
      searchValue: valueSearch,
    })
   }
+  changeValute = (PLN_EUR,PLN_USD,EUR_USD,e) =>{
+
+    const actualyValute = e.currentTarget.value
+    if(this.state.valute==="PLN" && actualyValute === 'EUR'){
+      this.state.skins.map(event =>{
+        if(event.st_cost_factory!== "Not Possible"){event.st_cost_factory = (event.st_cost_factory/PLN_EUR).toFixed(2)}
+        if(event.st_cost_minimal!== "Not Possible"){event.st_cost_minimal = (event.st_cost_minimal/PLN_EUR).toFixed(2)}
+        if(event.st_cost_field!== "Not Possible"){event.st_cost_field= (event.st_cost_field/PLN_EUR).toFixed(2)}
+        if(event.st_cost_wellworm!== "Not Possible"){event.st_cost_wellworm = (event.st_cost_wellworm/PLN_EUR).toFixed(2) }
+        if(event.st_cost_battle!== "Not Possible"){event.st_cost_battle = (event.st_cost_battle/PLN_EUR).toFixed(2)}
+        if(event.cost_factory!== "Not Possible"){event.cost_factory = (event.cost_factory/PLN_EUR).toFixed(2)}
+        if(event.cost_minimal!== "Not Possible"){event.cost_minimal = (event.cost_minimal/PLN_EUR).toFixed(2)} 
+        if(event.cost_field!== "Not Possible"){event.cost_field= (event.cost_field/PLN_EUR).toFixed(2)}
+        if(event.cost_wellworm!== "Not Possible"){event.cost_wellworm = (event.cost_wellworm/PLN_EUR).toFixed(2)}
+        if(event.cost_battle!== "Not Possible"){event.cost_battle = (event.cost_battle/PLN_EUR).toFixed(2)}
+        this.setState({
+          valute: "EUR",
+          skins: this.state.skins
+        })
+     })
+
+    }else if(this.state.valute==="EUR" && actualyValute === 'PLN'){
+      this.state.skins.map(event =>{
+        if(event.st_cost_factory!== "Not Possible"){event.st_cost_factory = (event.st_cost_factory*PLN_EUR).toFixed(2)}
+        if(event.st_cost_minimal!== "Not Possible"){event.st_cost_minimal = (event.st_cost_minimal*PLN_EUR).toFixed(2)}
+        if(event.st_cost_field!== "Not Possible"){event.st_cost_field= (event.st_cost_field*PLN_EUR).toFixed(2)}
+        if(event.st_cost_wellworm!== "Not Possible"){event.st_cost_wellworm = (event.st_cost_wellworm*PLN_EUR).toFixed(2) }
+        if(event.st_cost_battle!== "Not Possible"){event.st_cost_battle = (event.st_cost_battle*PLN_EUR).toFixed(2)}
+        if(event.cost_factory!== "Not Possible"){event.cost_factory = (event.cost_factory*PLN_EUR).toFixed(2)}
+        if(event.cost_minimal!== "Not Possible"){event.cost_minimal = (event.cost_minimal*PLN_EUR).toFixed(2)} 
+        if(event.cost_field!== "Not Possible"){event.cost_field= (event.cost_field*PLN_EUR).toFixed(2)}
+        if(event.cost_wellworm!== "Not Possible"){event.cost_wellworm = (event.cost_wellworm*PLN_EUR).toFixed(2)}
+        if(event.cost_battle!== "Not Possible"){event.cost_battle = (event.cost_battle*PLN_EUR).toFixed(2)}
+        this.setState({
+          valute: "PLN",
+          skins: this.state.skins
+        })
+     })
+
+    }else if(this.state.valute==="PLN" && actualyValute === 'USD'){
+      this.state.skins.map(event =>{
+        if(event.st_cost_factory!== "Not Possible"){event.st_cost_factory = (event.st_cost_factory/PLN_USD).toFixed(2)}
+        if(event.st_cost_minimal!== "Not Possible"){event.st_cost_minimal = (event.st_cost_minimal/PLN_USD).toFixed(2)}
+        if(event.st_cost_field!== "Not Possible"){event.st_cost_field= (event.st_cost_field/PLN_USD).toFixed(2)}
+        if(event.st_cost_wellworm!== "Not Possible"){event.st_cost_wellworm = (event.st_cost_wellworm/PLN_USD).toFixed(2) }
+        if(event.st_cost_battle!== "Not Possible"){event.st_cost_battle = (event.st_cost_battle/PLN_USD).toFixed(2)}
+        if(event.cost_factory!== "Not Possible"){event.cost_factory = (event.cost_factory/PLN_USD).toFixed(2)}
+        if(event.cost_minimal!== "Not Possible"){event.cost_minimal = (event.cost_minimal/PLN_USD).toFixed(2)} 
+        if(event.cost_field!== "Not Possible"){event.cost_field= (event.cost_field/PLN_USD).toFixed(2)}
+        if(event.cost_wellworm!== "Not Possible"){event.cost_wellworm = (event.cost_wellworm/PLN_USD).toFixed(2)}
+        if(event.cost_battle!== "Not Possible"){event.cost_battle = (event.cost_battle/PLN_USD).toFixed(2)}
+        this.setState({
+          valute: "USD",
+          skins: this.state.skins
+        })
+     })
+
+    }else if(this.state.valute==="USD" && actualyValute === 'PLN'){
+      this.state.skins.map(event =>{
+        if(event.st_cost_factory!== "Not Possible"){event.st_cost_factory = (event.st_cost_factory*PLN_USD).toFixed(2)}
+        if(event.st_cost_minimal!== "Not Possible"){event.st_cost_minimal = (event.st_cost_minimal*PLN_USD).toFixed(2)}
+        if(event.st_cost_field!== "Not Possible"){event.st_cost_field= (event.st_cost_field*PLN_USD).toFixed(2)}
+        if(event.st_cost_wellworm!== "Not Possible"){event.st_cost_wellworm = (event.st_cost_wellworm*PLN_USD).toFixed(2) }
+        if(event.st_cost_battle!== "Not Possible"){event.st_cost_battle = (event.st_cost_battle*PLN_USD).toFixed(2)}
+        if(event.cost_factory!== "Not Possible"){event.cost_factory = (event.cost_factory*PLN_USD).toFixed(2)}
+        if(event.cost_minimal!== "Not Possible"){event.cost_minimal = (event.cost_minimal*PLN_USD).toFixed(2)} 
+        if(event.cost_field!== "Not Possible"){event.cost_field= (event.cost_field*PLN_USD).toFixed(2)}
+        if(event.cost_wellworm!== "Not Possible"){event.cost_wellworm = (event.cost_wellworm*PLN_USD).toFixed(2)}
+        if(event.cost_battle!== "Not Possible"){event.cost_battle = (event.cost_battle*PLN_USD).toFixed(2)}
+        this.setState({
+          valute: "PLN",
+          skins: this.state.skins
+        })
+     })
+
+    }else if(this.state.valute==="EUR" && actualyValute === 'USD'){
+      this.state.skins.map(event =>{
+        if(event.st_cost_factory!== "Not Possible"){event.st_cost_factory = (event.st_cost_factor*EUR_USD).toFixed(2)}
+        if(event.st_cost_minimal!== "Not Possible"){event.st_cost_minimal = (event.st_cost_minimal*EUR_USD).toFixed(2)}
+        if(event.st_cost_field!== "Not Possible"){event.st_cost_field= (event.st_cost_field*EUR_USD).toFixed(2)}
+        if(event.st_cost_wellworm!== "Not Possible"){event.st_cost_wellworm = (event.st_cost_wellworm*EUR_USD).toFixed(2) }
+        if(event.st_cost_battle!== "Not Possible"){event.st_cost_battle = (event.st_cost_battle*EUR_USD).toFixed(2)}
+        if(event.cost_factory!== "Not Possible"){event.cost_factory = (event.cost_factory*EUR_USD).toFixed(2)}
+        if(event.cost_minimal!== "Not Possible"){event.cost_minimal = (event.cost_minimal*EUR_USD).toFixed(2)} 
+        if(event.cost_field!== "Not Possible"){event.cost_field= (event.cost_field*EUR_USD).toFixed(2)}
+        if(event.cost_wellworm!== "Not Possible"){event.cost_wellworm = (event.cost_wellworm*EUR_USD).toFixed(2)}
+        if(event.cost_battle!== "Not Possible"){event.cost_battle = (event.cost_battle*EUR_USD).toFixed(2)}
+        this.setState({
+          valute: "USD",
+          skins: this.state.skins
+        })
+     })
+
+    }else if(this.state.valute==="USD" && actualyValute === 'EUR'){
+      this.state.skins.map(event =>{
+        if(event.st_cost_factory!== "Not Possible"){event.st_cost_factory = (event.st_cost_factory/EUR_USD).toFixed(2)}
+        if(event.st_cost_minimal!== "Not Possible"){event.st_cost_minimal = (event.st_cost_minimal/EUR_USD).toFixed(2)}
+        if(event.st_cost_field!== "Not Possible"){event.st_cost_field= (event.st_cost_field/EUR_USD).toFixed(2)}
+        if(event.st_cost_wellworm!== "Not Possible"){event.st_cost_wellworm = (event.st_cost_wellworm/EUR_USD).toFixed(2) }
+        if(event.st_cost_battle!== "Not Possible"){event.st_cost_battle = (event.st_cost_battle*EUR_USD).toFixed(2)}
+        if(event.cost_factory!== "Not Possible"){event.cost_factory = (event.cost_factory/EUR_USD).toFixed(2)}
+        if(event.cost_minimal!== "Not Possible"){event.cost_minimal = (event.cost_minimal/EUR_USD).toFixed(2)} 
+        if(event.cost_field!== "Not Possible"){event.cost_field= (event.cost_field/EUR_USD).toFixed(2)}
+        if(event.cost_wellworm!== "Not Possible"){event.cost_wellworm = (event.cost_wellworm/EUR_USD).toFixed(2)}
+        if(event.cost_battle!== "Not Possible"){event.cost_battle = (event.cost_battle/EUR_USD).toFixed(2)}
+        this.setState({
+          valute: "EUR",
+          skins: this.state.skins
+        })
+     })
+
+    }
+    }
+  
 
 
   render(){
     return (
       <div className="Skins">
         <div className="Skins-Title">
-          <h2>SKINS</h2>
+        <img src="/image/layout/logo.png"  className="Ranks-LogoCS-IMG" alt="we lost this img"/>
+          <h3 className="Skins-Title-Text">SKINS</h3>
         </div>
           <div className="Form-Search">
             <form className="Search-input">
@@ -45,7 +160,7 @@ componentDidMount(){
             </form>
           </div>
           <div className="Select-valute">
-          <Valute valute={this.state.valute}/>
+          <Valute changeValute={this.changeValute.bind(this)}  fromValute="Skins-Valute"/>
           </div>
         <div className="Skins-Body">
         {this.state.skins.map((event,index)=>{
@@ -68,6 +183,7 @@ componentDidMount(){
       </div>
     );
   }
+
 }
 
 export default Skins;

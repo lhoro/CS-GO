@@ -8,6 +8,11 @@
   background-color: rgb(31, 31, 31);
   text-align:center;
 }
+.Ranks-Title{
+  border-bottom:solid 1px #e95547ed;
+  margin-bottom:20px;
+}
+
 
 .Ranks-Back{
   position: absolute;

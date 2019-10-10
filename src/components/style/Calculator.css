@@ -12,6 +12,7 @@ body{
   overflow: scroll;
 }
 
+
 .Calculator-Back{
   position: absolute;
   top: 210vh;
@@ -37,7 +38,7 @@ input {
   outline:none;
   height:30px;
 }
-.Calculator-Valute-Choise{
+.Valute-Choise{
   display:block;
   margin-bottom:10px;
   background:none;

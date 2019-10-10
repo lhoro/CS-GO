@@ -8,8 +8,10 @@ import { move } from './Service';
 function Ranks() {
   return (
     <div className="Ranks">
+      <div className="Ranks-Title">
       <img src="/image/layout/logo.png"  className="Ranks-LogoCS-IMG" alt="we lost this img"/>
       <h3 className="Ranks-Box-Title">RANKS</h3>
+      </div>
       <div className="Ranks-AllTable-Box">
         <div className="Ranks-Table-Box MM-Table-Box">
           <p className="Ranks-Table-Title MM-Title">MATCH MAKING</p>
