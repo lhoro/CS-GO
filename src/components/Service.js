@@ -76,3 +76,50 @@ export const coin_flip = ()=>{
     }, 500);
   }
 }
+
+
+
+
+export  const   float_skin = (event,float) =>{
+  const id_skin = "#"+event.name_weapon+event.name_skin
+  const skin_img = document.querySelector(id_skin)
+  if(float === "fn"){
+    if(event.cost_factory !== "Not Possible"){
+      skin_img.src= event.img_skin_fn
+    }else{
+      return 0;
+    }
+  }else if(float === "mw"){
+    if(event.cost_minimal !== "Not Possible"){
+      skin_img.src= event.img_skin_mw
+    }else{
+      return 0;
+    }
+  }else if(float === "ft"){
+    if(event.cost_field !== "Not Possible"){
+      skin_img.src= event.img_skin_ft
+    }else{
+      return 0;
+    }
+  }else if(float === "ww"){
+    if(event.cost_wellworm !== "Not Possible"){
+      skin_img.src= event.img_skin_ww
+    }else{
+      return 0;
+    }
+  }else if(float === "bs"){
+    if(event.cost_battle !== "Not Possible"){
+      skin_img.src= event.img_skin_bs
+    }else{
+      return 0;
+    }
+  }else{
+    skin_img.src= event.img_skin_fn
+  }
+}
+export const def_float = (event) =>{
+  const id_skin = "#"+event.name_weapon+event.name_skin
+  const skin_img = document.querySelector(id_skin)
+  skin_img.src= event.img_skin
+
+}
