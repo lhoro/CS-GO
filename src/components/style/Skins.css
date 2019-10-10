@@ -12,6 +12,7 @@ h2{
   height:100vh;
   background-color: rgb(26, 26, 26);
   overflow:scroll;
+
   /* margin-top:-6vh; */
 }
 
@@ -23,10 +24,22 @@ h2{
 .Skins-Title{
   text-align:center;
   background:rgb(0, 63, 0);
+  width:92%;
 }
 .Search-input{
   text-align:center;
+  width:92%;
 }
+.Search-input input{
+  background: none;
+  border-radius: 10px;
+  padding:5px 15px 5px 15px;
+  color:white;
+  border:none;
+  border: solid 1px #ffffff;
+}
+
+
 .Skins-Body{
   height:100%;
 }
@@ -35,9 +48,10 @@ h2{
   overflow:auto;
   display:block;
   text-align:center;
-  border-bottom:solid 1px red;
+  border-bottom:solid 1px #e95547ed;
   padding-bottom: 20px;
   padding-left: 20px;
+  margin-bottom:30px;
 }
 .One-Skin-Name{
   font-size:40px;
@@ -65,6 +79,7 @@ float:right;
 display:inline;
 margin-right:4%;
 box-shadow: 8px 6px 12px -2px black;
+margin-top:35px;
 }
 .Skins-cost_float p {
 text-align:left;
@@ -137,3 +152,66 @@ padding:10px;
   background:rgb(37, 0, 0);
   box-shadow: 0 8px 5px -2px black;
 }
+
+
+.Form-Search{
+  width:300px;
+ margin-left:10%;
+}
+.Search-Skin-input{
+  box-sizing: border-box;
+  width: 300px;
+  height: calc(3em + 2px);
+  margin: 0 0 1em;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1.5em;
+  background: #fff;
+  resize: none;
+  outline: none;
+  box-shadow:  3px 3px 5px 2px black;
+}
+.Search-input-label{
+  margin-left:-5px;
+  float:left;
+}
+.Search-Skin-input[required]:focus {
+  border-color: #e95547;
+}
+.Search-Skin-input[required]:focus + .Search-input-label[placeholder]:before {
+  color: #e95547;
+}
+
+.Search-Skin-input[required]:focus + .Search-input-label[placeholder]:before,
+.Search-Skin-input[required]:valid + .Search-input-label[placeholder]:before {
+  transition-duration: .2s;
+  transform: translate(0,-1.0em) scale(.9,.9);
+}
+.Search-Skin-input[required]:invalid + .Search-input-label[placeholder][alt]:before {
+  content: attr(alt);
+}
+.Search-Skin-input[required] + .Search-input-label[placeholder] {
+  display: block;
+  pointer-events: none;
+  line-height: 1.25em;
+  margin-top: calc(-2.3em - 2px);
+  margin-bottom: calc((3em - 1em) + 2px);
+}
+.Search-Skin-input[required] + .Search-input-label[placeholder]:before {
+  content: attr(placeholder);
+  display: inline-block;
+  margin: 0 calc(1em + 2px);
+  padding: 0 2px;
+  color: #898989;
+  white-space: nowrap;
+  transition: .3s ease-in-out;
+  background-size: 100% 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background:rgb(26, 26, 26);
+  border:radius 5px;
+}
+
+
+
+
