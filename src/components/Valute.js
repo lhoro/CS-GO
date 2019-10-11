@@ -10,24 +10,25 @@ class Valute extends React.Component{
     }
 }
 componentDidMount(){
-  axios.get('/CSGO/values/eur').then(
+  axios.get('http://api.nbp.pl/api/exchangerates/rates/A/EUR/').then(
         (res)=>{
           this.setState({
-            PLN_EUR: parseInt(res.data)
+            PLN_EUR: parseInt(res.data.rates[0].mid)
           })
         }).catch(()=>{
           console.log("Problem z pobaniem danych");
         })
 
-  axios.get('/CSGO/values/usd').then(
+  axios.get('http://api.nbp.pl/api/exchangerates/rates/A/USD/').then(
     (res)=>{
       this.setState({
-        PLN_USD: parseInt(res.data)
+        PLN_USD: parseInt(res.data.rates[0].mid)
       })
     }).catch(()=>{
       console.log("Problem z pobaniem danych");
     })      
 }
+
   render(){
     return(
       <select  defaultValue="USD" id={this.props.fromValute} className="Valute-Choise" onChange ={this.props.changeValute.bind(this,this.state.PLN_EUR,this.state.PLN_USD)}>
