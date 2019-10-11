@@ -82,7 +82,11 @@ function Ranks() {
         </div>
       </div>
     </div>
-      <button className="Ranks-Back" onClick={()=>move()}>BACK</button>
+    <div className="Button-box">
+    <button className="Ranks-Back" onClick={()=>move()}>BACK</button>
+    </div>
+
+     
     </div>
   );
 }

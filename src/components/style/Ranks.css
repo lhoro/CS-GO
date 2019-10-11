@@ -14,10 +14,19 @@
 }
 
 
+.Button-box{
+  display:block;
+
+  height:50px;
+  width:93%;
+  margin:0px auto;
+  
+}
 .Ranks-Back{
-  position: absolute;
-  top: 90vh;
-  left: 150vw;
+  float:left;
+  width:100px;
+  margin-left:13vw;
+  margin-top:15px;
 }
 .Ranks-Box-Title{
   text-align:center;
@@ -25,9 +34,10 @@
   margin-bottom:40px;
 }
 .Ranks-Body{
+  height:600px;
   text-align:center;
   width:95%;
-  margin:0px auto;
+  margin:0px auto
 }
 
 .Ranks-AllTable-Box{
@@ -44,6 +54,9 @@
   overflow:scroll;
   height: 75vh;
   overflow-x:hidden;
+}
+.Ranks-Table-Box td{
+  padding: 2px;
 }
 
 .Ranks-Table-Title{
