@@ -44,10 +44,10 @@
 
 /* homepage */
 .Homepage{
-  margin: 0px auto;
+  margin: 0px;
   width:100vw;
   height:100vh;
-  background-color: var(--background-color);
+  background-color: rgb(31, 31, 31);
 }
 
 .Circle{
@@ -124,6 +124,7 @@
 }
 
 .Homepage .Image{
+  margin: 0px;
   position:relative;
   width: 47.5vw;
   height: 45vh;
@@ -140,7 +141,6 @@
   background: url('/image/layout/image2.jpg') no-repeat;
   background-size: cover;
   float: right;
-
 }
 
 .Homepage .Empty{
@@ -148,14 +148,6 @@
  width: 100vw;
  clear:both;
 }
-
-.Homepage .Footer{
-  height: 0vh;
-  width: 100vw;
-  clear:both;
- }
- 
-
 
 .Homepage .Image3{
   background: url('/image/layout/image3.jpg') no-repeat;
@@ -167,48 +159,48 @@
   background: url('/image/layout/image4.jpg') no-repeat;
   background-size: cover;
   float: right;
+}
 
+.Arrow{
+  cursor:pointer;
+  border-radius: 50%;
+  z-index: 1000;
 }
 
 .Arrow-Up{
-  position: relative;
-  width: 40px;
-  height: 160px;
-  left: 2.5vw;
-  transform: translateX(-50%);
-  z-index: 1000;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 150vw;
+  top: 100vh;
+  transform: translate(-50% ,5%);
 }
 
 .Arrow-Down{
-  position: relative;
-  bottom: -20%;
-  width: 40px;
-  height: 160px;
-  left: 2.5vw;
-  transform: translateX(-50%);
-  z-index: 1000;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 150vw;
+  top: 200vh;
+  transform: translate(-50% ,-105%);
 }
 
 
 .Arrow-Left{
   position: absolute;
-  width: 16vw;
-  height: 4vh;
-  left: 150vw;
+  width: 100px;
+  height: 100px;
+  left: 100vw;
   top: 150vh;
-  transform-origin: left 2vh;
-  transform: translate(-200% ,-50%);
-  z-index: 1000;
+  transform: translate(5% ,-50%);
 }
 
 .Arrow-Right{
   position: absolute;
-  width: 16vw;
-  height: 4vh;
-  left: 150vw;
+  width: 100px;
+  height: 100px;
+  left: 200vw;
   top: 150vh;
-  transform: translate(100% ,-50%);
-  transform-origin: left 2vh;
-  z-index: 1000;
+  transform: translate(-105% ,-50%);
 }
 
