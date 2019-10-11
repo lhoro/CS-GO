@@ -149,6 +149,13 @@
  clear:both;
 }
 
+.Homepage .Footer{
+  height: 0vh;
+  width: 100vw;
+  clear:both;
+ }
+ 
+
 
 .Homepage .Image3{
   background: url('/image/layout/image3.jpg') no-repeat;
@@ -167,17 +174,18 @@
   position: relative;
   width: 40px;
   height: 160px;
+  left: 2.5vw;
   transform: translateX(-50%);
   z-index: 1000;
 }
 
 .Arrow-Down{
-  position: absolute;
+  position: relative;
+  bottom: -20%;
   width: 40px;
   height: 160px;
-  left: 150vw;
-  top: 150vh;
-  transform: translate(-50% ,34vh);
+  left: 2.5vw;
+  transform: translateX(-50%);
   z-index: 1000;
 }
 
@@ -203,3 +211,4 @@
   transform-origin: left 2vh;
   z-index: 1000;
 }
+
