@@ -22,6 +22,7 @@ function Homepage() {
         </div>
       </div>
       
+      
       <img src="/image/layout/arrowdown.png" className="Arrow-Down" alt="arrow" onClick={()=>move("down")} />
       <img src="/image/layout/arrowleft.png" className="Arrow-Left" alt="arrow" onClick={()=>move("left")} />
       <img src="/image/layout/arrowright.png" className="Arrow-Right" alt="arrow" onClick={()=>move("right")} />
