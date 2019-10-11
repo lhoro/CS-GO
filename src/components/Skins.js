@@ -29,7 +29,7 @@ componentDidMount(){
      searchValue: valueSearch,
    })
   }
-  changeValute = (PLN_EUR,PLN_USD,EUR_USD,e) =>{
+  changeValute = (PLN_EUR,PLN_USD,e) =>{
 
     const actualyValute = e.currentTarget.value
     if(this.state.valute==="PLN" && actualyValute === 'EUR'){

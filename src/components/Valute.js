@@ -30,10 +30,10 @@ componentDidMount(){
 }
   render(){
     return(
-      <select id={this.props.fromValute} className="Valute-Choise" onChange ={this.props.changeValute.bind(this,this.state.PLN_EUR,this.state.PLN_USD,this.state.EUR_USD)}>
+      <select  defaultValue="USD" id={this.props.fromValute} className="Valute-Choise" onChange ={this.props.changeValute.bind(this,this.state.PLN_EUR,this.state.PLN_USD)}>
         <option>PLN</option>
         <option>EUR</option>
-        <option selected>USD</option>
+        <option>USD</option>
       </select>
     )
   }

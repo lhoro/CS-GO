@@ -157,16 +157,16 @@ class Calculator extends React.Component {
    }
   }
 
-  changeValute = (PLN_EUR,PLN_USD,EUR_USD,e) =>{
+  changeValute = (PLN_EUR,PLN_USD,e) =>{
     const actualyValute = e.currentTarget.value
     if(this.state.valute==="PLN" && actualyValute === 'EUR'){
       const cost = document.querySelector('#cost').value/PLN_EUR
       if(cost >0 || this.state.item.length > 0 ){
       document.querySelector('#cost').value =  cost
       this.state.item.map(event =>{
-        const newCost = event.cena/4.38
+        const newCost = event.cena/PLN_EUR
         event.cena = newCost.toFixed(2)
-        return 0;
+        return '';
      })
 
     }
@@ -175,7 +175,7 @@ class Calculator extends React.Component {
       if(cost >0 || this.state.item.length > 0 ){
         document.querySelector('#cost').value =  cost
         this.state.item.map(event =>{
-          const newCost = event.cena*4.38
+          const newCost = event.cena*PLN_EUR
           event.cena = newCost.toFixed(2)
           return 0;
        })
@@ -185,7 +185,7 @@ class Calculator extends React.Component {
       if(cost >0 || this.state.item.length > 0 ){
       document.querySelector('#cost').value =  cost
       this.state.item.map(event =>{
-        const newCost = event.cena*0.249
+        const newCost = event.cena/PLN_USD
         event.cena = newCost.toFixed(2)
         return 0;
      })
@@ -195,27 +195,27 @@ class Calculator extends React.Component {
       if(cost >0 || this.state.item.length > 0 ){
       document.querySelector('#cost').value =  cost
       this.state.item.map(event =>{
-        const newCost = event.cena*4.006
+        const newCost = event.cena*PLN_USD
         event.cena = newCost.toFixed(2)
         return 0;
      })
     }
     }else if (this.state.valute==="USD" && actualyValute === 'EUR'){
-      const cost = document.querySelector('#cost').value/EUR_USD
+      const cost = document.querySelector('#cost').value*PLN_USD/PLN_EUR
       if(cost >0 || this.state.item.length > 0 ){
       document.querySelector('#cost').value =  cost
       this.state.item.map(event =>{
-        const newCost = event.cena/1.093
+        const newCost = event.cena*PLN_USD/PLN_EUR
         event.cena = newCost.toFixed(2)
         return 0;
      })
     }
     }else if (this.state.valute==="EUR" && actualyValute === 'USD'){
-      const cost = document.querySelector('#cost').value*EUR_USD
+      const cost = document.querySelector('#cost').value*PLN_EUR/PLN_USD
       if(cost >0 || this.state.item.length > 0 ){
       document.querySelector('#cost').value =  cost
       this.state.item.map(event =>{
-        const newCost = event.cena*1.093
+        const newCost = event.cena*PLN_EUR/PLN_USD
         event.cena = newCost.toFixed(2)
         return 0;
      })
