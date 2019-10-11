@@ -81,10 +81,11 @@ function Ranks() {
           </table>
         </div>
       </div>
-    </div>
-    <div className="Button-box">
+      <div className="Button-box">
     <button className="Ranks-Back" onClick={()=>move()}>BACK</button>
     </div>
+    </div>
+ 
 
      
     </div>
