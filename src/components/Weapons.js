@@ -1,9 +1,10 @@
 import React from 'react';
 import './style/Weapons.css';
+import axios from 'axios';
 
 import { play,move} from './Service'
 
-import stats from "../data/weapons.json"
+import weapons from "../data/weapons.json"
 
 class Weapons extends React.Component {
   constructor(){
@@ -16,9 +17,16 @@ class Weapons extends React.Component {
   }
 
   componentDidMount(){
-    this.setState({
-      weapons : stats,
-    })
+      this.setState({
+        weapons 
+      })
+    // axios.get('/CSGO/values/eur').then(
+    //   (res)=>{
+    //     console.log(res.data)
+    //   }).catch(()=>{
+    //     console.log("Problem z pobaniem danych");
+    //   })
+
   }
   
 
