@@ -9,7 +9,9 @@ body{
   background-color:  var(--background-color);
   overflow: hidden;
 }
-
+button{
+  cursor:crosshair;
+}
 .App {
   margin: 0px auto;
   position: relative;

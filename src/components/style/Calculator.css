@@ -16,6 +16,7 @@ body{
 .Calculator-Back{
 margin-left:50%;
 transform:translateX(-50%);
+width:100px;
 }
 
 .Table-ButtonDelete button{
