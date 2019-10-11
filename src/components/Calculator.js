@@ -288,9 +288,10 @@ class Calculator extends React.Component {
    render(){
      return(
     <div className= "Calculator" >
-      <button className="Calculator-Back" onClick={()=>move()}>BACK</button>
+     
       
       <div className="Calculator-Form-Box">
+      <button className="Calculator-Back" onClick={()=>move()}>BACK</button>
       
       <Valute changeValute={this.changeValute.bind(this)} fromValute="Calculator-Valute" />
           <div className="Calculator-Title-Box">
