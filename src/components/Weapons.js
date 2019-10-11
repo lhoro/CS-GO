@@ -20,12 +20,6 @@ class Weapons extends React.Component {
       this.setState({
         weapons 
       })
-    // axios.get('/CSGO/values/eur').then(
-    //   (res)=>{
-    //     console.log(res.data)
-    //   }).catch(()=>{
-    //     console.log("Problem z pobaniem danych walut");
-    //   })
   }
   
   sort = (e) =>{

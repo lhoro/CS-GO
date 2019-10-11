@@ -15,6 +15,14 @@ app.get('/CSGO/values/eur', (req,response) => {
         console.log("Problem z pobaniem danych /values/eur");
     })
 });
+app.get('/CSGO/values/usd', (req,response) => {
+    axios.get('http://api.nbp.pl/api/exchangerates/rates/A/USD/')
+    .then((res)=>{
+        response.json(res.data.rates[0].mid);
+    }).catch(()=>{
+        console.log("Problem z pobaniem danych /values/usd");
+    })
+});
 
 const port = process.env.PORT || 5000;
 app.listen(port);
