@@ -84,8 +84,8 @@ margin-top:20px;
 }
 
 .Skins-img_float{
-  width:45%;
-  float:left;
+  width: 45%;
+  float: left;
   display:inline;
   text-align:center;
   margin-left:2%;
@@ -186,7 +186,7 @@ padding:10px;
   width:300px;
   margin-left:10%;
   margin-left: 50%;
-  transform: Translate(-50%);
+  transform: translate(-50%);
 }
 .Search-Skin-input{
   box-sizing: border-box;
@@ -194,9 +194,9 @@ padding:10px;
   height: calc(3em + 2px);
   margin: 0 0 1em;
   padding: 1em;
-  border: 1px solid #ccc;
+  border: 1px solid var(--list-sec-color);
   border-radius: 1.5em;
-  background: #fff;
+
   resize: none;
   outline: none;
   box-shadow:  3px 3px 5px 2px black;
@@ -206,10 +206,10 @@ padding:10px;
   float:left;
 }
 .Search-Skin-input[required]:focus {
-  border-color: #e95547;
+  border-color: var(--decorate-color);
 }
 .Search-Skin-input[required]:focus + .Search-input-label[placeholder]:before {
-  color: #e95547;
+  color: var(--decorate-color);
 }
 
 .Search-Skin-input[required]:focus + .Search-input-label[placeholder]:before,
@@ -232,7 +232,7 @@ padding:10px;
   display: inline-block;
   margin: 0 calc(1em + 2px);
   padding: 0 2px;
-  color: #898989;
+  color:  var(--list-sec-color);
   white-space: nowrap;
   transition: .3s ease-in-out;
   background-size: 100% 5px;
