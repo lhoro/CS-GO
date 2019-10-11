@@ -48,6 +48,7 @@ componentDidMount(){
           valute: "EUR",
           skins: this.state.skins
         })
+        return 0;
      })
 
     }else if(this.state.valute==="EUR" && actualyValute === 'PLN'){
@@ -66,6 +67,7 @@ componentDidMount(){
           valute: "PLN",
           skins: this.state.skins
         })
+        return 0;
      })
 
     }else if(this.state.valute==="PLN" && actualyValute === 'USD'){
@@ -84,6 +86,7 @@ componentDidMount(){
           valute: "USD",
           skins: this.state.skins
         })
+        return 0;
      })
 
     }else if(this.state.valute==="USD" && actualyValute === 'PLN'){
@@ -102,6 +105,7 @@ componentDidMount(){
           valute: "PLN",
           skins: this.state.skins
         })
+        return 0;
      })
 
     }else if(this.state.valute==="EUR" && actualyValute === 'USD'){
@@ -120,6 +124,7 @@ componentDidMount(){
           valute: "USD",
           skins: this.state.skins
         })
+        return 0;
      })
 
     }else if(this.state.valute==="USD" && actualyValute === 'EUR'){
@@ -138,6 +143,7 @@ componentDidMount(){
           valute: "EUR",
           skins: this.state.skins
         })
+        return 0;
      })
 
     }
@@ -148,10 +154,12 @@ componentDidMount(){
   render(){
     return (
       <div className="Skins">
+        <div className="Select-valute">
+          <Valute changeValute={this.changeValute.bind(this)}  fromValute="Skins-Valute"/>
+        </div>
         <div className="Skins-Title">
         <img src="/image/layout/logo.png"  className="Ranks-LogoCS-IMG" alt="we lost this img"/>
           <h3 className="Skins-Title-Text">SKINS</h3>
-        </div>
           <div className="Form-Search">
             <form className="Search-input">
               <input  onChange={this.searchSkins.bind(this)} className="Search-Skin-input" type="text" required ></input>
@@ -159,9 +167,8 @@ componentDidMount(){
               </label>
             </form>
           </div>
-          <div className="Select-valute">
-          <Valute changeValute={this.changeValute.bind(this)}  fromValute="Skins-Valute"/>
-          </div>
+        </div>
+      
         <div className="Skins-Body">
         {this.state.skins.map((event,index)=>{
           let colorSkin= {
@@ -170,7 +177,9 @@ componentDidMount(){
           const nameSkin = event.name_weapon+event.name_skin.toUpperCase()
           if(nameSkin.indexOf(this.state.searchValue.toUpperCase()) > -1){
             return(
-              <OneSkin event={event} index={index}  float_skin={float_skin}  def_float={def_float} colorSkin={colorSkin} valute={this.state.valute} />
+              <div className="Box-OneSkin" key={index}>
+                <OneSkin event={event} indexKey={index}  float_skin={float_skin}  def_float={def_float} colorSkin={colorSkin} valute={this.state.valute} />
+              </div> 
               )
           }else{
             return '';

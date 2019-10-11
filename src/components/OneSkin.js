@@ -3,7 +3,7 @@ import React from 'react';
 const OneSkin = (props) =>{
 
   return(
-<div className="One-Skin" key={props.index} >
+<div className="One-Skin" key={props.indexKey} >
  
   <div className="Skins-img_float" >
   <p className="One-Skin-Name" style={props.colorSkin}>{props.event.name_weapon} | {props.event.name_skin}</p>
