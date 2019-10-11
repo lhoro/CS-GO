@@ -163,44 +163,59 @@
 
 .Arrow{
   cursor:pointer;
-  border-radius: 50%;
+  width: 60px;
+  height: 60px;
   z-index: 1000;
+  transition-duration: 0.5s;
 }
 
 .Arrow-Up{
   position: absolute;
-  width: 100px;
-  height: 100px;
   left: 150vw;
   top: 100vh;
   transform: translate(-50% ,5%);
 }
 
+
+.Arrow-Up:hover{
+  transform:  translate(-50% ,5%)
+              scale(1.2);
+}
+
 .Arrow-Down{
   position: absolute;
-  width: 100px;
-  height: 100px;
   left: 150vw;
   top: 200vh;
   transform: translate(-50% ,-105%);
 }
 
+.Arrow-Down:hover{
+  transform: translate(-50% ,-105%)
+              scale(1.2);
+}
+
 
 .Arrow-Left{
   position: absolute;
-  width: 100px;
-  height: 100px;
   left: 100vw;
   top: 150vh;
   transform: translate(5% ,-50%);
 }
 
+.Arrow-Left:hover{
+  transform: translate(5% ,-50%)
+              scale(1.2);
+}
+
 .Arrow-Right{
   position: absolute;
-  width: 100px;
-  height: 100px;
   left: 200vw;
   top: 150vh;
   transform: translate(-105% ,-50%);
+}
+
+.Arrow-Right:hover{
+  transform: translate(-105% ,-50%)
+              scale(1.2);
 }
 

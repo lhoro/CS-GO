@@ -1,4 +1,5 @@
 @import "colors.css";
+
 body{
   cursor: crosshair;
 }
@@ -10,10 +11,8 @@ h2{
   padding: 0px;
   width:110vw;
   height:100vh;
-  background-color: rgb(26, 26, 26);
+  background-color: var(--background-color);
   overflow:scroll;
-
-  /* margin-top:-6vh; */
 }
 
 .Skins-Back{
@@ -23,7 +22,7 @@ h2{
 }
 .Skins-Title{
   text-align:center;
-  border-bottom:solid 1.5px #e95547ed;
+  border-bottom:solid 1.5px  var(--decorate-color);
   width:92%;
   margin-bottom:20px;
   padding-bottom:20px;
@@ -41,9 +40,9 @@ h2{
   background: none;
   border-radius: 10px;
   padding:5px 15px 5px 15px;
-  color:white;
+  color:  var(--sec-font-color);
   border:none;
-  border: solid 1px #ffffff;
+  border: solid 1px var(--select-border-color);
 }
 .Select-valute {
 width:92%;
@@ -57,7 +56,7 @@ margin-top:20px;
   width:60px;
   height:20px;
   box-shadow:none;
-  border: solid 1px white;
+  border: solid 1px var(--select-border-color);
   outline:none;
   box-shadow: 3px 3px 5px 2px black;
 }
@@ -72,7 +71,7 @@ margin-top:20px;
   overflow:auto;
   display:block;
   text-align:center;
-  border-bottom:solid 1.5px #e95547ed;
+  border-bottom:solid 1.5px var(--decorate-color);
   padding-bottom: 20px;
   padding-left: 20px;
   margin-bottom:30px;
@@ -85,18 +84,18 @@ margin-top:20px;
 }
 
 .Skins-img_float{
-width:45%;
-float:left;
-display:inline;
-text-align:center;
-margin-left:2%;
-
+  width:45%;
+  float:left;
+  display:inline;
+  text-align:center;
+  margin-left:2%;
 }
 
 .Skins-img{
-display:block;
-margin:0px auto;
+  display:block;
+  margin:0px auto;
 }
+
 .Skins-cost_float{
 width:45%;
 float:right;
@@ -105,6 +104,7 @@ margin-right:4%;
 box-shadow: 8px 6px 12px -2px black;
 margin-top:35px;
 }
+
 .Skins-cost_float p {
 text-align:left;
 margin-left:5%;
@@ -117,14 +117,14 @@ padding:10px;
   float:right;
 }
 .Skins-cost-shadow{
-  background:#626262;
+  background:var(--list-sec-color);
 }
 
 .Skin-float-bt{
   background:none;
   border:none;
   overflow:hidden; 
-  color:white;
+  color:var(--sec-font-color);
   cursor:pointer;
   outline:none;
   font-size:15px;
@@ -132,6 +132,9 @@ padding:10px;
   transition-duration: 1s;
 }
 
+
+
+/* ZUZYCIE */
 .fn-button{
   background:green;
 }
@@ -178,11 +181,12 @@ padding:10px;
 }
 
 
+
 .Form-Search{
   width:300px;
- margin-left:10%;
- margin-left: 50%;
-transform: Translate(-50%);
+  margin-left:10%;
+  margin-left: 50%;
+  transform: Translate(-50%);
 }
 .Search-Skin-input{
   box-sizing: border-box;
@@ -234,7 +238,7 @@ transform: Translate(-50%);
   background-size: 100% 5px;
   background-repeat: no-repeat;
   background-position: center;
-  background:rgb(26, 26, 26);
+  background:var(--background-color);
   border:radius 5px;
 }
 

@@ -45,7 +45,7 @@
 }
 
 .Weapons{
-  color: #dddddd;
+  color: var(--main-font-color);
   text-shadow: 0px 0px 2px black;
   margin: 0px auto;
   padding: 0px;
@@ -53,11 +53,11 @@
   height:100vh;
   overflow: scroll;
   overflow-X: hidden;
-  background-color: rgb(31, 31, 31);
+  background-color: var(--background-color);
 }
 
 .Weapons-Title{
-  border-bottom:solid 1.5px #e95547ed;
+  border-bottom:solid 1.5px var(--decorate-color);
   margin-bottom:20px;
 }
 
@@ -99,9 +99,9 @@
   height:26px;
   text-align:center;
   box-shadow:none;
-  color:white;
-  background-color: rgb(31, 31, 31);
-  border: solid 1px white;
+  color: var(--sec-font-color);
+  background-color: var(--background-color);
+  border: solid 1px var(--select-border-color);
   outline:none;
   box-shadow: 3px 3px 5px 2px black;
 }
@@ -118,6 +118,7 @@
   margin-bottom: 5px;
   width:50vw;
   height: 180px;
+  color: var(--sec-font-color);
   overflow: hidden;
 }
 
