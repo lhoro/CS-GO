@@ -52,11 +52,10 @@
 
 .Circle{
   position:absolute;
-  width: 40vh;
-  height:40vh;
   top: 150vh;
   left: 150vw;
-
+  width: 300px;
+  height:300px;
   transform:  translate(-50%,-50%)
               scale(2.0);
   background-color: var(--background-color);
@@ -65,10 +64,10 @@
 }
 
 .Animation-Box {
-  width: 35vh;
-  height:35vh;
-  margin: 50%;
+  width:256px;
+  height:256px;
   perspective:500px;
+  margin: 50%;
   -webkit-perspective:500px;
   transform:  translate(-50%,-50%);
   z-index: 100;
@@ -161,19 +160,14 @@
   background: url('/image/layout/image4.jpg') no-repeat;
   background-size: cover;
   float: right;
-  /* top: 200vh;
-  left: 200vw;
-  transform: translate(-100%, -100%) */
+
 }
 
 .Arrow-Up{
   position: relative;
-  float: left;
   width: 40px;
   height: 160px;
-  /* left: 150vw;
-  top: 150vh; */
-  transform: translateX(50%);
+  transform: translateX(-50%);
   z-index: 1000;
 }
 
