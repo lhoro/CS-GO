@@ -5,11 +5,11 @@
   padding: 0px;
   width:100vw;
   height:100vh;
-  background-color: rgb(31, 31, 31);
+  background-color:  var(--background-color);
   text-align:center;
 }
 .Ranks-Title{
-  border-bottom:solid 1.5px #e95547ed;
+  border-bottom:solid 1.5px var(--decorate-color);
   margin-bottom:20px;
 }
 
@@ -76,7 +76,7 @@
 .Ranks table,
 .Ranks th,
 .Ranks td{
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid var( --select-border-color);
 }
 
 .Ranks-LogoCS-IMG{

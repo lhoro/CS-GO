@@ -1,9 +1,7 @@
 import React from 'react';
-import './style/Menu.css';
 
 import { play } from './Service'
 
-// import {Link} from 'react-router-dom';
 
 function Menu() {
   return (

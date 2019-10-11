@@ -47,7 +47,7 @@
   margin: 0px;
   width:100vw;
   height:100vh;
-  background-color: rgb(31, 31, 31);
+  background-color: var(--background-color2);
 }
 
 .Circle{
@@ -58,7 +58,7 @@
   height:300px;
   transform:  translate(-50%,-50%)
               scale(2.0);
-  background-color: var(--background-color);
+  background-color: var(--background-color2);
   border-radius: 50%;
   z-index: 99;
 }
