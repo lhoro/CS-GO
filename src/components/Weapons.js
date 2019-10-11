@@ -11,7 +11,8 @@ class Weapons extends React.Component {
     this.state =({
       weapons: [],
       sort:"Name",
-      show:"All"
+      show:"All",
+      mode:"To worst",
     })
   }
 
@@ -27,11 +28,9 @@ class Weapons extends React.Component {
     //   })
   }
   
-
   sort = (e) =>{
     const type = e.currentTarget.value;
     const length = this.state.weapons.length;
-    console.log(type)
     let we = [...this.state.weapons];
     if(type==="DMG"){
       for(let j = 0;  j < length + 1; j++){
@@ -40,7 +39,7 @@ class Weapons extends React.Component {
             let pom = we[i-1];
             we[i-1] = we[i];
             we[i] = pom;
-          }   
+          }  
         }
       }
     }
@@ -58,7 +57,7 @@ class Weapons extends React.Component {
     else if(type==="Speed"){
       for(let j = 0;  j < length + 1; j++){
         for(let i = 1; i < length; i++){
-          if(parseInt(we[i-1].speed) > parseInt(we[i].speed)){
+          if(parseInt(we[i-1].max_speed) > parseInt(we[i].max_speed)){
             let pom = we[i-1];
             we[i-1] = we[i];
             we[i] = pom;
@@ -67,9 +66,26 @@ class Weapons extends React.Component {
       }
     }
 
+    if(this.state.mode === "To worst"){
+      we.reverse()
+    }
+
     this.setState({
       weapons : we,
-      sort : type
+      sort : type,
+    })
+  }
+
+  mode = (e) => {
+    let current = e.currentTarget.value;
+    let we = [...this.state.weapons]
+    if(current !== this.state.mode){
+      we.reverse();
+    }
+
+    this.setState({
+      weapons : we,
+      mode : current,
     })
   }
 
@@ -83,27 +99,57 @@ class Weapons extends React.Component {
   render(){
     return (<>
       <div className="Weapons"> 
-        <div> Lista broniw CS:GO</div>
-        <div>Sortowanko:
-          <select name="sort" onChange={this.sort} value={this.state.sort}>   
-            <option>Name</option>
-            <option>DMG</option>
-            <option>DPS</option>
-            <option>Speed</option>
-          </select>
-          Pokaż:
-          <select naem="type"  onChange={this.show} value={this.state.show}>
-            <option>All</option>
-            <option>Pistol</option>
-            <option>SMG</option>
-            <option>Rifle</option>
-            <option>Heavy</option>
-          </select>
-
-
-
-        </div>
-        <button className="Weapon-Back" onClick={()=>move()}>BACK</button>
+      <div className="Weapons-Title">
+        <img src="/image/layout/logo.png"  className="Weapons-Title-CS-IMG" alt="we lost this img"/>
+        <h3 className="Ranks-Box-Title">CS:GO WEAPONS</h3>
+        <div className="Sort">
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <div className="Sort-Title"> Sort by: </div>
+              </td>
+              <td>
+                <select className="Sort-Select" name="sort" onChange={this.sort} value={this.state.sort}>   
+                  <option>Name</option>
+                  <option>DMG</option>
+                  <option>DPS</option>
+                  <option>Speed</option>
+                </select>
+              </td> 
+            </tr>
+            <tr>
+              <td>
+                <div className="Sort-Title"> Show:</div>
+              </td>
+              <td>
+                <select className="Sort-Select" name="type"  onChange={this.show} value={this.state.show}>
+                  <option>All</option>
+                  <option>Pistol</option>
+                  <option>SMG</option>
+                  <option>Rifle</option>
+                  <option>Heavy</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div className="Sort-Title"> Mode: </div>
+              </td>
+              <td>
+                <select className="Sort-Select" name="mode" onChange={this.mode} value={this.state.mode}>
+                  <option>To best</option>
+                  <option>To worst</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+      <button className="Weapon-Back" onClick={()=>move()}>BACK</button>
+        
+        
         {this.state.weapons.map((item)=>{
           let bg = "";
           if(item.team==="CT")

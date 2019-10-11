@@ -44,8 +44,6 @@
   }
 }
 
-
-
 .Weapons{
   color: #dddddd;
   text-shadow: 0px 0px 2px black;
@@ -54,7 +52,65 @@
   width:100vw;
   height:100vh;
   overflow: scroll;
+  overflow-X: hidden;
+  background-color: rgb(31, 31, 31);
 }
+
+.Weapons-Title{
+  border-bottom:solid 1.5px #e95547ed;
+  margin-bottom:20px;
+}
+
+.Weapons-Box-Title{
+  text-align:center;
+  margin-top:0px;
+  margin-bottom:40px;
+}
+
+.Weapons-Title-CS-IMG{
+  width:40%;
+  height:10%;
+  margin-left:50%;
+  transform:translate(-50%);
+  }
+  .Ranks-Box-Title{
+    font-family: "Counter-Strike Regular";
+  }
+
+.Sort {
+  position: relative;
+  margin-left: 80vw;
+  margin-top: -12vh;
+  margin-bottom: 2vh;
+  width:220px;
+  padding:2vh;
+  }
+
+.Sort-Title{
+  width: 100px;
+  text-align:right;
+  margin-right: 10px;
+}
+
+.Sort-Select{
+  font-size: 20px;
+  border-radius:5px;
+  width:120px;
+  height:26px;
+  text-align:center;
+  box-shadow:none;
+  color:white;
+  background-color: rgb(31, 31, 31);
+  border: solid 1px white;
+  outline:none;
+  box-shadow: 3px 3px 5px 2px black;
+}
+/* .Sort-Select{
+  width: 150px;
+  text-align:center;
+} */
+
+
 
 .Weapon{
   margin: 0px auto;
