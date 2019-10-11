@@ -1,3 +1,5 @@
+
+
 export const play = (sound) =>{
   if(sound==="switch")
     sound = "/sounds/switch.wav";
@@ -123,3 +125,4 @@ export const def_float = (event) =>{
   skin_img.src= event.img_skin
 
 }
+
