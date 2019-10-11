@@ -174,7 +174,7 @@ componentDidMount(){
           let colorSkin= {
             color: event.skin_color
           }
-          const nameSkin = event.name_weapon+event.name_skin.toUpperCase()
+          const nameSkin = event.name_weapon+" "+event.name_skin.toUpperCase()
           if(nameSkin.indexOf(this.state.searchValue.toUpperCase()) > -1){
             return(
               <div className="Box-OneSkin" key={index}>
