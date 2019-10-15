@@ -12,7 +12,7 @@ class Weapons extends React.Component {
       weapons: [],
       sort:"Name",
       show:"All",
-      mode:"To worst",
+      mode:"ASC",
     })
   }
 
@@ -26,7 +26,11 @@ class Weapons extends React.Component {
     const type = e.currentTarget.value;
     const length = this.state.weapons.length;
     let we = [...this.state.weapons];
-    if(type==="DMG"){
+    if(type==="Name"){
+      console.log("Name")
+      we = weapons;
+    }
+    else if(type==="DMG"){
       for(let j = 0;  j < length + 1; j++){
         for(let i = 1; i < length; i++){
           if(parseInt(we[i-1].damage) > parseInt(we[i].damage)){
@@ -60,7 +64,7 @@ class Weapons extends React.Component {
       }
     }
 
-    if(this.state.mode === "To worst"){
+    if(this.state.mode === "ASC"){
       we.reverse()
     }
 
@@ -132,8 +136,8 @@ class Weapons extends React.Component {
               </td>
               <td>
                 <select className="Sort-Select" name="mode" onChange={this.mode} value={this.state.mode}>
-                  <option>To best</option>
-                  <option>To worst</option>
+                  <option>ASC</option>
+                  <option>DESC</option>
                 </select>
               </td>
             </tr>
