@@ -31,6 +31,9 @@ h2{
 }
 .Skins-Title-Text{
   margin-top:0px;
+  color:var(--section-title);
+  font-size:35px;
+  font-family: cs-font;
 }
 .Search-input{
   text-align:center;
@@ -243,6 +246,9 @@ padding:10px;
   margin-top:-10px;
 }
 
+.Stat-track{
+  color:rgb(255, 115, 0);
+}
 
 
 

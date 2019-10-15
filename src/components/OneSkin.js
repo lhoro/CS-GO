@@ -17,11 +17,11 @@ const OneSkin = (props) =>{
     </div>
   </div>
   <div className="Skins-cost_float">
-    <p className="Skins-cost-shadow"><span>StatTrack</span> Factory New:<span className="price_skin">{(props.event.st_cost_factory!== "Not Possible")? props.event.st_cost_factory+" "+props.valute : props.event.st_cost_factory} </span></p>
-    <p><span>StatTrack</span> Minimal Wear:<span className="price_skin">{(props.event.st_cost_minimal!== "Not Possible")? props.event.st_cost_minimal+" "+props.valute : props.event.st_cost_minimal}</span></p>
-    <p className="Skins-cost-shadow"><span>StatTrack</span> Field-Test:<span className="price_skin">{(props.event.st_cost_field!== "Not Possible")? props.event.st_cost_field+" "+props.valute : props.event.st_cost_field}</span></p>
-    <p ><span>StatTrack</span> Well-Worm:<span className="price_skin">{(props.event.st_cost_wellworm !== "Not Possible")? props.event.st_cost_wellworm+" "+props.valute : props.event.st_cost_wellworm} </span></p>
-    <p className="Skins-cost-shadow"><span>StatTrack</span> Battle-Scarred:<span className="price_skin">{(props.event.st_cost_battle !== "Not Possible")? props.event.st_cost_battle+" "+props.valute : props.event.st_cost_battle}</span></p>
+    <p className="Skins-cost-shadow"><span className="Stat-track">StatTrack</span> Factory New:<span className="price_skin">{(props.event.st_cost_factory!== "Not Possible")? props.event.st_cost_factory+" "+props.valute : props.event.st_cost_factory} </span></p>
+    <p><span className="Stat-track">StatTrack</span > Minimal Wear:<span className="price_skin">{(props.event.st_cost_minimal!== "Not Possible")? props.event.st_cost_minimal+" "+props.valute : props.event.st_cost_minimal}</span></p>
+    <p className="Skins-cost-shadow"><span className="Stat-track">StatTrack</span> Field-Test:<span className="price_skin">{(props.event.st_cost_field!== "Not Possible")? props.event.st_cost_field+" "+props.valute : props.event.st_cost_field}</span></p>
+    <p ><span className="Stat-track">StatTrack</span> Well-Worm:<span className="price_skin">{(props.event.st_cost_wellworm !== "Not Possible")? props.event.st_cost_wellworm+" "+props.valute : props.event.st_cost_wellworm} </span></p>
+    <p className="Skins-cost-shadow"><span className="Stat-track">StatTrack</span> Battle-Scarred:<span className="price_skin">{(props.event.st_cost_battle !== "Not Possible")? props.event.st_cost_battle+" "+props.valute : props.event.st_cost_battle}</span></p>
     <p>Factory New:<span className="price_skin">{(props.event.cost_factory !== "Not Possible")? props.event.cost_factory+" "+props.valute : props.event.cost_factory} </span></p>
     <p className="Skins-cost-shadow">Minimal Wear:<span className="price_skin">{(props.event.cost_minimal!== "Not Possible")? props.event.cost_minimal+" "+props.valute : props.event.cost_minimal}</span></p>
     <p>Field-Test:<span className="price_skin">{(props.event.cost_field!== "Not Possible")? props.event.cost_field+" "+props.valute : props.event.cost_field}</span></p>

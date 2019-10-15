@@ -287,4 +287,6 @@ transform:translate(-50%);
 width:100%;
 text-align:center;
 margin-top:70px;
+color:var(--section-title);
+font-family: cs-font;
 }
