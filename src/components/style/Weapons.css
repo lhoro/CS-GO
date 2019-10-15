@@ -226,6 +226,5 @@
 .Weapon-Back{
   position: absolute;
   top: 150vh;
-  left: 95vw;
-  transform: translateX(-100%);
+  left: 99vw;
 }

@@ -6,6 +6,12 @@
   --sec-font-color: #ffffff;
   --list-sec-color: #626262;
   --select-border-color: #ffffff;
+  --section-title: #f9f9f9;
 
 }
+@font-face {
+  font-family: "cs-font";
+  src: url("/fonts/counter_strike/cs_regular.ttf");
+  }
+
 

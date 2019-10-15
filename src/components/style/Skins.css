@@ -18,7 +18,7 @@ h2{
 .Skins-Back{
   position: absolute;
   top: 150vh;
-  left: 205vw;
+  left: 201vw;
 }
 .Skins-Title{
   text-align:center;
@@ -31,6 +31,9 @@ h2{
 }
 .Skins-Title-Text{
   margin-top:0px;
+  color:var(--section-title);
+  font-size:35px;
+  font-family: cs-font;
 }
 .Search-input{
   text-align:center;
@@ -239,7 +242,13 @@ padding:10px;
   background:var(--background-color);
   border:radius 5px;
 }
+#Skins-Valute{
+  margin-top:-10px;
+}
 
+.Stat-track{
+  color:rgb(255, 115, 0);
+}
 
 
 

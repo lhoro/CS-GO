@@ -187,7 +187,7 @@ componentDidMount(){
         })}
         </div>
   
-        <button className="Skins-Back" onClick={()=>move()}>BACK</button>
+        <img src="/image/layout/arrowleft.png" className=" Skins-Back Arrow Arrow-Left" alt="arrow" onClick={()=>move()} />
       </div>
     );
   }

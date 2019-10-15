@@ -1,5 +1,7 @@
 @import "colors.css";
 
+
+
 .Ranks{
   margin: 0px auto;
   padding: 0px;
@@ -11,6 +13,7 @@
 .Ranks-Title{
   border-bottom:solid 1.5px var(--decorate-color);
   margin-bottom:20px;
+  
 }
 
 
@@ -23,18 +26,22 @@
   
 }
 .Ranks-Back{
-  float:left;
-  width:100px;
-  margin-left:13vw;
-  position:relative;
-  margin-top:1%;
-  
+  width:60px;
+  height:60px;
+  left: 150vw;
+  top: 99vh;
+  transition-duration: 0.5s;
 }
+
 .Ranks-Box-Title{
   text-align:center;
   margin-top:0px;
   margin-bottom:40px;
+  color:var(--section-title);
+  font-size:35px;
+  font-family: cs-font
 }
+
 .Ranks-Body{
   height:80vh;
   text-align:center;
@@ -85,9 +92,7 @@
   margin-left:50%;
   transform:translate(-65%);
   }
-  .Ranks-Box-Title{
-    font-familya: "Counter-Strike Regular";
-  }
+
 
 /* MM STYLES */
 .MM-Table-Box{
