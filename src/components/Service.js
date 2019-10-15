@@ -1,3 +1,23 @@
+export const calcItems = (obj) =>{
+  if(localStorage.getItem("calcItems")){
+    const calcItems = JSON.parse(localStorage.getItem("calcItems"))
+    calcItems.push(obj)
+    localStorage.setItem("calcItems", JSON.stringify(calcItems))
+  }
+  else{
+    const calcItems = []
+    calcItems.push(obj)
+    localStorage.setItem("calcItems", JSON.stringify(calcItems))
+  }
+}
+export const dropItem = (id) =>{
+  const calcItems = JSON.parse(localStorage.getItem("calcItems"))
+  calcItems.splice(id,1)
+  localStorage.setItem("calcItems", JSON.stringify(calcItems))
+}
+export const dropAllItem = () =>{
+  localStorage.setItem("calcItems", [])
+}
 // ON/OFF SOUNDS
 export const sound = () =>{
   const options = document.querySelector(".Options-Box");
@@ -23,6 +43,7 @@ export const play = (sound) =>{
     player.src = sound;
   }
 }
+
 
 // MOVE BETWEEN PAGES
 export const move = (dir) =>{
