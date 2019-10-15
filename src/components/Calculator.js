@@ -291,8 +291,7 @@ class Calculator extends React.Component {
      
       
       <div className="Calculator-Form-Box">
-      <button className="Calculator-Back" onClick={()=>move()}>BACK</button>
-      
+      <img src="/image/layout/arrowup.png" className=" Calculator-Back" alt="arrow" onClick={()=>move()} />
       <Valute changeValute={this.changeValute.bind(this)} fromValute="Calculator-Valute" />
           <div className="Calculator-Title-Box">
           <h2>CALCULATOR</h2>

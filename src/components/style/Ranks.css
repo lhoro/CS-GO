@@ -23,13 +23,13 @@
   
 }
 .Ranks-Back{
-  float:left;
-  width:100px;
-  margin-left:13vw;
-  position:relative;
-  margin-top:1%;
-  
+  width:60px;
+  height:60px;
+  left: 150vw;
+  top: 99vh;
+  transition-duration: 0.5s;
 }
+
 .Ranks-Box-Title{
   text-align:center;
   margin-top:0px;

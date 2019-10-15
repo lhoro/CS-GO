@@ -18,7 +18,7 @@ h2{
 .Skins-Back{
   position: absolute;
   top: 150vh;
-  left: 205vw;
+  left: 201vw;
 }
 .Skins-Title{
   text-align:center;
@@ -238,6 +238,9 @@ padding:10px;
   background-position: center;
   background:var(--background-color);
   border:radius 5px;
+}
+#Skins-Valute{
+  margin-top:-10px;
 }
 
 

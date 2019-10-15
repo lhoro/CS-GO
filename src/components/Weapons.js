@@ -145,7 +145,7 @@ class Weapons extends React.Component {
         </table>
       </div>
       </div>
-      <button className="Weapon-Back" onClick={()=>move()}>BACK</button>
+      <img src="/image/layout/arrowright.png" className="Weapon-Back Arrow Arrow-Right" alt="arrow" onClick={()=>move()} />
         
         
         {this.state.weapons.map((item)=>{

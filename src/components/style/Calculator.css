@@ -12,13 +12,21 @@ body{
   background: url("/image/layout/table.jpg");
   overflow: scroll;
   color: var(--sec-font-color);
+  overflow-x:hidden;
 }
 
 
 .Calculator-Back{
 margin-left:50%;
 transform:translateX(-50%);
-width:100px;
+transition-duration: 0.5s;
+width:60px;
+height:60px;
+cursor:pointer;
+}
+.Calculator-Back:hover{
+  transform:  translate(-50% ,5%)
+              scale(1.2);
 }
 
 .Table-ButtonDelete button{
@@ -42,7 +50,7 @@ input {
 .Valute-Choise{
   display:block;
   margin-bottom:10px;
-  margin-top:-27px;
+  margin-top:-60px;
   background:none;
   color:var(--sec-font-color);
   position: relative;
@@ -278,5 +286,5 @@ transform:translate(-50%);
 .Calculator-Title-Box{
 width:100%;
 text-align:center;
-margin-top:25px;
+margin-top:70px;
 }
