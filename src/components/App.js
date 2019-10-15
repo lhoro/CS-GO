@@ -15,6 +15,10 @@ class App extends React.Component {
   componentDidMount(){
     const hp = document.querySelector(".Homepage");
     window.scrollTo(hp.offsetWidth,hp.offsetHeight);
+    
+    if(!localStorage.getItem("sound")){
+      localStorage.setItem("sound" , "ON")
+    }
   }
   
   render(){

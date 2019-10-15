@@ -73,6 +73,27 @@
   z-index: 100;
 }
 
+.Options-Box{
+  position: relative;
+  width: 39px;
+  height: 30px;
+  right: 15px;
+  top: 15px;
+  float: right;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.Sound-ON{
+  background: url('/image/layout/sound.png') no-repeat;
+  background-size: cover;
+}
+
+.Sound-OFF{
+  background: url('/image/layout/mute.png') no-repeat;
+  background-size: cover;
+}
+
 
 .Coins {
   position:relative;
