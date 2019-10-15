@@ -138,18 +138,15 @@
 }
 
 .Weapon:hover{
-  animation: show_stats2_1 2s forwards ease-in-out;
-  animation-delay: 0.2s;
+  animation: show_stats2_1 1s forwards ease-in-out;
 }
 
 .Weapon:hover .Weapon-Name{
-  animation:  weapon_name 2s forwards ease-in-out;
-  animation-delay: 0.2s;
+  animation:  weapon_name 1s forwards ease-in-out;
 }
 
 .Weapon:hover .Weapon-Stats1-Box1{
-  animation:  show_stats1 2s forwards ease-in-out;
-  animation-delay: 0.2s;
+  animation:  show_stats1 1s forwards ease-in-out;
 }
 
 
@@ -193,8 +190,7 @@
 
 
 .Weapon:hover .Weapon-Stats2{
-  animation: show_stats2_2 2s forwards ease-in-out;
-  animation-delay: 0.2s;
+  animation: show_stats2_2 1s forwards ease-in-out;
 }
 
 
