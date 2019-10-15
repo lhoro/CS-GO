@@ -24,7 +24,6 @@ componentDidMount(){
 
   searchSkins = (e)=>{
    const valueSearch =  e.currentTarget.value;
-   console.log(valueSearch)
    this.setState({
      searchValue: valueSearch,
    })
