@@ -1,18 +1,21 @@
 
 
 export const play = (sound) =>{
-  if(sound==="switch")
-    sound = "/sounds/switch.wav";
-  
-  let player =  document.querySelector('.Player')
-  player.volume = 0.2;
-  player.src = sound;
+  // if(){
+    if(sound==="switch")
+      sound = "/sounds/effects/switch.wav";
+    
+    let player =  document.querySelector('.Player')
+    player.volume = 0.2;
+    player.src = sound;
+  // }
 }
 
 
 export const move = (dir) =>{
   const w = window.innerWidth;
   const h = window.innerHeight;
+  play("switch");
     
   if(dir==="up"){
     window.scrollTo(w, 0); 
