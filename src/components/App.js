@@ -19,6 +19,7 @@ class App extends React.Component {
     if(!localStorage.getItem("sound")){
       localStorage.setItem("sound" , "ON")
     }
+
   }
   
   render(){

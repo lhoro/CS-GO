@@ -2,6 +2,7 @@ import React from 'react';
 import './style/Calculator.css';
 import Valute from './Valute.js'
 import { move } from './Service'
+import { calcItems } from './Service'
 
 class Calculator extends React.Component {
   constructor(props){
@@ -18,6 +19,9 @@ class Calculator extends React.Component {
         valute: 'USD',
         error: ''
       }
+  }
+  componentDidMount(){
+
   }
   componentDidUpdate(){
     this.valueAllItem.bind(this)
@@ -57,38 +61,34 @@ class Calculator extends React.Component {
     this.valueOneItem()
    }
 
-
-
    addItem = () =>{
     let cost = document.querySelector('#cost').value
     let val = document.querySelector('#quantity').value
     let name = document.querySelector('#skinName').value
     cost = parseFloat(cost).toFixed(2)
     if(cost > 0 && name !== ''){
+      let obj = '';
       if(val>0){
         val = parseInt(val)
-        const obj = {id: this.state.idItem,nazwa: name,cena:cost,ilosc:val}
-        this.state.item.push(obj)
-        this.setState({
-          item: this.state.item,
-          ShowValueItem: 0,
-          idItem: this.state.idItem +1
-        })
-        document.querySelector('#cost').value = ''
-        document.querySelector('#quantity').value = '' 
-        document.querySelector('#skinName').value = '' 
+        obj = {id: this.state.idItem,nazwa: name,cena:cost,ilosc:val}
       }else{
-        const obj = {id: this.state.idItem,nazwa: name,cena:cost,ilosc:'1'}
-        this.state.item.push(obj)
-        this.setState({
-          item: this.state.item,
-          ShowValueItem: 0,
-          idItem: this.state.idItem +1
-        })
-        document.querySelector('#cost').value = ''
-        document.querySelector('#quantity').value = '' 
-        document.querySelector('#skinName').value = '' 
+        obj = {id: this.state.idItem,nazwa: name,cena:cost,ilosc:'1'}
     }
+    calcItems(obj)
+    this.state.item.push(obj)
+    this.setState({
+      item: this.state.item,
+      ShowValueItem: 0,
+      idItem: this.state.idItem +1
+    })
+
+
+    document.querySelector('#cost').value = ''
+    document.querySelector('#quantity').value = '' 
+    document.querySelector('#skinName').value = '' 
+
+
+
     this.setState({
       error: ''
     })
