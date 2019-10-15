@@ -51,6 +51,14 @@ export const move = (dir) =>{
 
 
 //COIN FLIP ANIMATION
+const addAnim = (coins, anim) =>{
+  coins.classList.add(anim);
+}
+
+const removeBlock = (coins) =>{
+  coins.classList.remove("Block")
+}
+
 export const coin_flip = ()=>{
   const coins = document.querySelector(".Coins");
   if(coins.classList.value.indexOf("Block")<0){
@@ -58,7 +66,6 @@ export const coin_flip = ()=>{
     setTimeout(()=>{
       const coins = document.querySelector(".Coins");
       let anim = "Anim-Play";
-      
       if(coins.classList.value.indexOf("Play2")<0){
         let random = (Math.random());
         if(random>0.4)
@@ -73,17 +80,13 @@ export const coin_flip = ()=>{
       if(coin1.classList.value.indexOf("CTT")>-1){
         coin1.classList.add("CT");
         coin1.classList.remove("CTT");
-        console.log("kk")
       }
       coins.classList.remove("Anim-Play");
       coins.classList.remove("Anim-Play2");
       coins.classList.remove("Anim2-Play");
       coins.classList.remove("Anim2-Play2");
-      coins.classList.add(anim);
-      setTimeout(()=>{
-        const coins = document.querySelector(".Coins");
-        coins.classList.remove("Block");
-      },5000)
+      setTimeout(addAnim, 25, coins, anim);
+      setTimeout(removeBlock, 3100, coins)
     }, 500);
   }
 }
