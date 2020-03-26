@@ -99,11 +99,11 @@ class Weapons extends React.Component {
       <div className="Weapons"> 
       <div className="Weapons-Title">
         <img src="/image/layout/logo.png"  className="Weapons-Title-CS-IMG" alt="we lost this img"/>
-        <h3 className="Ranks-Box-Title">CS:GO WEAPONS</h3>
+        <h3 className="Ranks-Box-Title">WEAPONS</h3>
         <div className="Sort">
         <table>
           <tbody>
-            <tr>
+            <tr className="Sort-by">
               <td>
                 <div className="Sort-Title"> Sort by: </div>
               </td>
@@ -116,7 +116,7 @@ class Weapons extends React.Component {
                 </select>
               </td> 
             </tr>
-            <tr>
+            <tr className="Show">
               <td>
                 <div className="Sort-Title"> Show:</div>
               </td>
@@ -130,7 +130,7 @@ class Weapons extends React.Component {
                 </select>
               </td>
             </tr>
-            <tr>
+            <tr className="Mode">
               <td>
                 <div className="Sort-Title"> Mode: </div>
               </td>
@@ -144,10 +144,11 @@ class Weapons extends React.Component {
           </tbody>
         </table>
       </div>
+      <img src="/image/layout/arrowright.png" className="Weapon-Back Arrow Arrow-Right" alt="arrow" onClick={()=>move("/")} />
       </div>
-      <img src="/image/layout/arrowright.png" className="Weapon-Back Arrow Arrow-Right" alt="arrow" onClick={()=>move()} />
+      
         
-        
+        <div className="Weapons-Body">
         {this.state.weapons.map((item)=>{
           let bg = "";
           if(item.team==="CT")
@@ -192,6 +193,7 @@ class Weapons extends React.Component {
           }
           else return null;
         })}
+        </div>
       </div>
       </>
     );

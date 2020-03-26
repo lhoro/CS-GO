@@ -10,6 +10,7 @@
   background-color:  var(--background-color);
   text-align:center;
 }
+
 .Ranks-Title{
   border-bottom:solid 1.5px var(--decorate-color);
   margin-bottom:20px;
@@ -64,6 +65,11 @@
   height: 70vh;
   overflow-x:hidden;
 }
+.Ranks-Table-Box::-webkit-scrollbar{
+  background:var(--background-color)
+}
+
+
 .Ranks-Table-Box td{
   padding: 2px;
 }
@@ -121,5 +127,66 @@ height:46.6px;
 }
 
 ::-webkit-scrollbar {
- background:#202020;
+ background:none;
+}
+
+/* TABLET */
+
+@media only screen and (max-width:1199px){
+
+  .Ranks{
+    min-height: 100vh ;
+    margin-left:0px;
+    
+  }
+  .Ranks-Body{
+    overflow:scroll;
+    overflow-x:hidden;
+    height:80vh;
+    scrollbar-width: none;
+  }
+ 
+
+  .Ranks-Body::-webkit-scrollbar{
+    display:none;
+  }
+  .Ranks-LogoCS-IMG{
+   margin-top:10px;
+  }
+  .Ranks-Box-Title{
+    margin-bottom:20px;
+  }
+  .Ranks-Back {
+    top:10vh;
+    left:191vw
+  }
+  .MM-Table-Box{
+    width:100%;
+    height:100%;
+    margin-bottom:20px;
+    overflow:hidden;
+  }
+  .Wingman-Table-Box{
+    width:100%;
+    height:100%;
+    margin-bottom:20px;
+    overflow:hidden;
+  }
+  .DZ-Table-Box{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+  }
+}
+
+/* PHONE */
+
+@media only screen and (max-width:799px){
+  .Ranks-Body{
+    overflow:scroll;
+    overflow-x:hidden;
+    height:85%;
+    margin-left:0px;
+  }
+  
 }

@@ -82,7 +82,7 @@ function Ranks() {
         </div>
       </div>
       <div className="Button-box">
-    <img src="/image/layout/arrowdown.png" className="Ranks-Back Arrow Arrow-Down" alt="arrow" onClick={()=>move()} />
+    <img src="/image/layout/arrowdown.png" className="Ranks-Back Arrow Arrow-Down" alt="arrow" onClick={()=>move("/")} />
     </div>
     </div>
  

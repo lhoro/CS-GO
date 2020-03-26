@@ -1,13 +1,20 @@
 @import "colors.css";
 
+@keyframes Shadow_box {
+  0% {opacity: 1}
+  100% {opacity:0}
+}
+
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: unset;
 } 
 
 body{
   margin: 0px auto;
   background-color:  var(--background-color);
   overflow: hidden;
+  font-size:20px;
+  position:absolute;
 }
 button{
   cursor:crosshair;
@@ -16,6 +23,15 @@ button{
   margin: 0px auto;
   position: relative;
 }
+.Loader-Gif{
+  position:absolute;
+  left:50vw;
+  top:50vh;
+  transform:translate(-50%,-50%);
+  width:20vw;
+  height:20vw;
+}
+
 
 table{
   padding: 0px;
@@ -27,10 +43,53 @@ table{
 
 table td{
   padding: 0px;
-  width:100vw;
-  height:100vh;
 }
+
+.Loader-Box{
+  position: fixed;
+  margin: 0px auto;
+  width: 150vw;
+  height: 150vh;
+  top: 0px;
+  left: 0px;
+  background: Black;
+  z-index:5000;
+  display:none;
+}
+
+.Loader-Box-Shadow{
+  animation: Shadow_box 1s linear ;
+}
+.Locked-Box{
+  position: fixed;
+  margin: 0px auto;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  background: var(--background-color);
+  z-index:4999;
+  display:none;
+}
+.Locked-Text{
+  color: var(--main-font-color);
+  /* text-shadow: var( --sec-font-color); */
+  margin: auto;
+}
+
 
 .Player{
   display:none;
+}
+
+@media only screen and (max-width:799px){
+  * {
+    -webkit-tap-highlight-color:  rgba(0,0,0,0); 
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+  } 
 }

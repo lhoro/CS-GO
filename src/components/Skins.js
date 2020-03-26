@@ -23,6 +23,7 @@ componentDidMount(){
 
 
   searchSkins = (e)=>{
+    
    const valueSearch =  e.currentTarget.value;
    this.setState({
      searchValue: valueSearch,
@@ -157,11 +158,11 @@ componentDidMount(){
           <Valute changeValute={this.changeValute.bind(this)}  fromValute="Skins-Valute"/>
         </div>
         <div className="Skins-Title">
-        <img src="/image/layout/logo.png"  className="Ranks-LogoCS-IMG" alt="we lost this img"/>
+        <img src="/image/layout/logo.png"  className="Skins-LogoCS-IMG" alt="we lost this img"/>
           <h3 className="Skins-Title-Text">SKINS</h3>
           <div className="Form-Search">
-            <form className="Search-input">
-              <input  onChange={this.searchSkins.bind(this)} className="Search-Skin-input" type="text" required ></input>
+            <form className="Search-input" onSubmit={(e)=>{e.preventDefault()}}>
+              <input  onChange={this.searchSkins.bind(this)}  className="Search-Skin-input" type="text" required ></input>
               <label className="Search-input-label" placeholder="looking for :" alt="find skin">
               </label>
             </form>
@@ -187,7 +188,7 @@ componentDidMount(){
         })}
         </div>
   
-        <img src="/image/layout/arrowleft.png" className=" Skins-Back Arrow Arrow-Left" alt="arrow" onClick={()=>move()} />
+        <img src="/image/layout/arrowleft.png" className=" Skins-Back Arrow Arrow-Left" alt="arrow" onClick={()=>move("/")} />
       </div>
     );
   }

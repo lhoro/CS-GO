@@ -241,3 +241,27 @@
               scale(1.2);
 }
 
+/* TABLET */
+
+@media only screen and (max-width:1199px){
+  .Circle{
+    outline:none;
+    transform:  translate(-50%,-50%)
+                scale(1);
+  }
+
+}
+
+/* PHONE */
+
+@media only screen and (max-width:799px){
+  .Homepage{
+    height: 100vh;
+    overflow-y:hidden;
+  }
+  .Circle{
+    outline:none;
+    transform:  translate(-50%,-50%)
+    scale(0.8);
+  }
+}

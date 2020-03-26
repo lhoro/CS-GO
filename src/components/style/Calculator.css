@@ -1,20 +1,20 @@
-
 @import "colors.css";
 
-body{
-  font-size:20px;
-  margin:0px auto;
-  
-}
 .Calculator{
   width: 101vw;
   height: 100vh;
-  background: url("/image/layout/table.jpg");
-  overflow: scroll;
+  background: url("/image/layout/tlo-calc.jpg") no-repeat scroll center ;
   color: var(--sec-font-color);
-  overflow-x:hidden;
 }
-
+.nav-calc{
+  height:21vh;
+}
+.Presents-Calc{
+  height:79vh;
+  overflow:auto;
+  scrollbar-width: none;
+ 
+}
 
 .Calculator-Back{
 margin-left:50%;
@@ -28,6 +28,8 @@ cursor:pointer;
   transform:  translate(-50% ,5%)
               scale(1.2);
 }
+
+
 
 .Table-ButtonDelete button{
   cursor: pointer;
@@ -43,6 +45,10 @@ cursor:pointer;
   transform:scale(1.2);
   color: var(--decorate-color);
 }
+.Table-ButtonDelete-X button{
+display:none;
+}
+
 input {
   outline:none;
   height:30px;
@@ -83,7 +89,7 @@ transform: translate(-50%);
 }
 
 .Calculator-Form{
-  margin-top:10%;
+  margin-top:5%;
   margin-left:50%;
   transform: translate(-50%);
   text-align:center;
@@ -91,6 +97,7 @@ transform: translate(-50%);
 .Calculator-Form-textQuantity{
   margin:10px;
 }
+
 
 .Calculator-Table-Items{
   width:100%;
@@ -101,10 +108,7 @@ transform: translate(-50%);
   margin:0px auto;
 
 }
-.Calculator-Body{
-  background: url("/image/layout/table.jpg");
-  /* background-size: 100% ; */
-}
+
 
 .Calculator-Resoult{
   font-size:25px;
@@ -127,6 +131,9 @@ transform: translate(-50%);
 
 .Table-Form-Title-Delete{
   width:5%;
+}
+.Table-Form-Title-Delete-X{
+  display:none;
 }
 
 
@@ -263,7 +270,6 @@ input[type=number] {
 }
 
 .Calculator-Form-Box{
-  background: url("/image/layout/tlo-calc.jpg") no-repeat scroll center ;
   background-size: 100% 100%;
   padding-bottom:20px;
 }
@@ -280,13 +286,177 @@ input[type=number] {
 .Calculator-LogoCS-IMG{
 width:40%;
 height:10%;
-margin-left:50%;
+margin-left:40%;
 transform:translate(-50%);
 }
 .Calculator-Title-Box{
 width:100%;
 text-align:center;
-margin-top:70px;
+margin-top:30px;
 color:var(--section-title);
 font-family: cs-font;
+
 }
+@media only screen and (min-width:799px){
+  .Table-Form-Title-Quantity::after{
+    content: "QUANTITY";
+  }
+}
+
+
+/* TABLET */
+@media only screen and (max-width:1199px){
+  .Calculator{
+    width:100vw;
+   padding-right:5vw;
+   background: url(/image/layout/tlo-calc-phone.jpg) no-repeat scroll center;
+   background-size: 100% 100%;
+  }
+  .Calculator-Title-Box{
+    margin-top:40px;
+  }
+  .Valute-Choise{
+    margin-left:5%;
+    outline:none;
+  }
+   .Calculator-Back{
+      margin-left:94%;
+      margin-top:10px;
+   }
+
+  .Calculator-Form-Box{
+   font-size:15px;
+   width:90%;
+   margin:0px auto;
+   background:none;
+  }
+  .Calculator-Body{
+    font-size:15px;
+    width:90%;
+   margin:auto;
+   background:none;
+   margin-bottom: 3vh;
+  
+  }
+
+  .Calculator-Quantity{
+    margin-top:50px;
+    padding-bottom:5px;
+  }
+
+  .Calculator-ValueOneItem{
+    margin-top:30px;
+    text-align:center;
+  }
+
+  .Table-Form-Title-Quantity{
+    width:0px;
+  }
+
+  .Table-Form-Title-Sumary,
+  .Table-Form-Title-Index,
+  .Table-Form-Title-NameSkin,
+  .Table-Form-Title-Cost,
+  .Table-Form-Title-Quantity,
+  .Table-Form-Title-Delete-X{
+    padding:5px;
+  }
+
+  .Calculator-Table-Form,.Table-Quantity,.Table-Cost,.Table-Sumary{
+    text-align:center;
+  }
+
+  .Table-ButtonDelete button:hover {
+    transform:scale(1.03);
+    color: var(--sec-font-color);
+  }
+
+  .Table-Form-Title-Index{
+    max-width:20px;
+  }
+  .Table-Form-Title-Quantity{
+    max-width:80px;
+  }
+.Table-SkinName,.Table-Sumary,.Table-Cost{
+  padding-left:10px;
+  padding-right:10px;
+  overflow: hidden;
+  max-width:30px;
+  word-wrap:break-word;
+}
+.Table-Form-Title-NameSkin,.Table-Form-Title-Cost{
+  min-width:64px;
+}
+.Table-Form-Title-Delete-X{
+  height:20px;
+}
+.Table-ButtonDelete-X button{
+  text-align:center;
+  display:block;
+  cursor: pointer;
+  background:none;
+  border:none;
+  color:var(--sec-font-color);
+  font-size:20px;
+  margin:3px;
+  transition: 1s ;
+  outline:none;
+  padding-left:50%;
+  transform:translateX(-50%);
+  max-width:15px;
+}
+
+.Table-ButtonDelete-X button:hover{
+    transform:scale(1)
+    translateX(-50%);
+    color: white;
+}
+
+
+.Table-ButtonDelete,.Table-Form-Title-Delete{
+  display:none;
+}
+.Table-Form-Title-Delete-X{
+  display:block;
+}
+.Calculator-Title-Box{
+  margin-top:0px;
+}
+.nav-calc{
+  height:18vh;
+}
+.Presents-Calc{
+  height:82vh;
+  overflow:auto;
+  scrollbar-width: none;
+}
+}
+
+/* PHONE */
+
+@media only screen and (max-width:799px){
+  .Table-Form-Title-Quantity::after{
+    content: "PCS";
+  }
+.Table-ButtonDelete-X button{
+  padding-left:1px;
+  transform:translateX(-0%);
+  margin:0px auto;
+}
+
+.Table-ButtonDelete-X button:hover{
+    transform:scale(1)
+    translateX(-0%);
+    color: white;
+}
+
+.nav-calc{
+  height:15vh;
+}
+.Presents-Calc{
+  height:85vh;
+  overflow:auto;
+  scrollbar-width: none;
+}
+}
+

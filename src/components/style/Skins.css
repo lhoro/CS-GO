@@ -1,8 +1,5 @@
 @import "colors.css";
 
-body{
-  cursor: crosshair;
-}
 h2{
   margin-top:0px;
 }
@@ -13,6 +10,7 @@ h2{
   height:100vh;
   background-color: var(--background-color);
   overflow:scroll;
+  scrollbar-width: none;
 }
 
 .Skins-Back{
@@ -63,6 +61,12 @@ margin-top:20px;
   outline:none;
   box-shadow: 3px 3px 5px 2px black;
 }
+.Skins-LogoCS-IMG{
+  width:40%;
+  height:20%;
+  margin-left:50%;
+  transform:translate(-65%);
+  }
 
 .Skins-Body{
   height:100%;
@@ -250,5 +254,97 @@ padding:10px;
   color:rgb(255, 115, 0);
 }
 
+
+/* TABLET */
+
+@media only screen and (max-width:1199px){
+  .Skins{
+    width:100vw;  
+    height: 100vh;
+    overflow:hidden;
+    margin-left: -5.1vw;
+  }
+  .Skins-Title{
+    width:100%; 
+    height: 20%;
+    margin-bottom: 0px;
+  }
+  .Skins-Back{
+    top:104vh;
+    left:292vw;
+  }
+  .Select-valute{
+    margin-left:-80%;
+  }
+  .Skins-Body{
+  font-size:17px;
+  overflow:scroll;
+  scrollbar-width: none;
+  overflow-x:hidden;
+  width:100%;
+  margin:0px auto;
+  height:70%;
+  
+  }
+  .Skins-Body::-webkit-scrollbar{
+   display:none;
+  }
+  
+  
+  .One-Skin{
+    width:100%;
+    margin-left:0px;
+  }
+  .Skins-img_float{
+    width:100%;
+    margin-left:-20px;
+  }
+  .Skins-img {
+    width:40%;
+  }
+.One-Skin-Name{
+  width:100%;
+  margin:0px auto;
+  margin-top:15px;
+}
+.Skins-cost_float{
+  width:100%;
+  margin-right: 20px;
+}
+.Skins-LogoCS-IMG{
+  height:26%;
+}
+}
+
+/* PHONE */
+
+@media only screen and (max-width:799px){
+  .Skins{
+    margin-left: -5vw;
+    
+  }
+  .Form-Search{
+    margin-left:50%;
+  }
+  
+  .Skins-Back{
+    left:282vw;
+  }
+  .Select-valute{
+    margin-left:0px;
+  }
+  .Skins-Body{
+  width:98%;
+  }
+  .Skins-img {
+    width:80%;
+  }
+.One-Skin-Name{
+  width:90%;
+}
+.Skins-LogoCS-IMG{
+  height:20%;
+}
+}
 
 

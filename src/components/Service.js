@@ -1,3 +1,4 @@
+// -----  CALCULATOR  -----
 export const calcItems = (obj) =>{
   if(localStorage.getItem("calcItems")){
     const calcItems = JSON.parse(localStorage.getItem("calcItems"))
@@ -16,9 +17,10 @@ export const dropItem = (id) =>{
   localStorage.setItem("calcItems", JSON.stringify(calcItems))
 }
 export const dropAllItem = () =>{
-  localStorage.setItem("calcItems", [])
+  localStorage.setItem("calcItems", JSON.stringify([]))
 }
-// ON/OFF SOUNDS
+
+// -----  ON/OFF SOUNDS  ------
 export const sound = () =>{
   const options = document.querySelector(".Options-Box");
   if(options.classList.value.indexOf("ON")>-1){
@@ -33,7 +35,7 @@ export const sound = () =>{
   }
 }
 
-// PLAY SOUND
+// ----- PLAY SOUND ----- 
 export const play = (sound) =>{
   if(localStorage.getItem("sound")==="ON"){
     if(sound==="switch")
@@ -45,33 +47,148 @@ export const play = (sound) =>{
 }
 
 
-// MOVE BETWEEN PAGES
-export const move = (dir) =>{
-  const w = window.innerWidth;
-  const h = window.innerHeight;
-  play("switch");
-  if(dir==="up"){
-    window.scrollTo(w, 0); 
-    return 0;
+
+
+
+
+// ----- MOVE BETWEEN PAGES -----
+var timeHandler, isMobile, isLandspace, initialHeight = 0; 
+
+// sprawdzenie czy urządzenie jest mobilne 
+// oraz ustawienie startowych wartości rozdzielczości
+export const checkDevice = () => {
+  // isMobile = window.matchMedia("only screen and (max-width: 1199px)").matches;
+  isMobile = typeof window.orientation !== "undefined" || (navigator.userAgent.indexOf('IEMobile') !== -1);
+  if(initialHeight===0){
+    initialHeight = window.innerHeight;
+    isLandspace = (window.innerWidth > window.innerHeight) ? true : false;
   }
-  if(dir==="left"){
-    window.scrollTo(0, h); 
-    return 0;
-  }
-  if(dir==="right"){
-    window.scrollTo(2*w+5, h); 
-    return 0;
-  }
-  if(dir==="down"){
-    window.scrollTo(w, 2*h); 
-    return 0;
-  }
-  window.scrollTo(w, h); 
-  return 0;
 }
 
 
-//COIN FLIP ANIMATION
+const removeLoader = (loader) =>{
+ loader.style.display= "none";
+}
+const removeLoaderGif = (loaderGif,loader) =>{
+  loader.classList.add("Loader-Box-Shadow")
+  loaderGif.style.display= "none";
+ }
+
+export const move = (component) =>{
+  let w = window.innerWidth;
+  let h = window.innerHeight;
+  let scrBhw = "auto";
+  const lock = document.querySelector(".Locked-Box");
+  checkDevice();
+
+  // wybór czy scrolowanie odbywa się między stronami czy też nie 
+  // w celu ustawienia prędkości animacji dodaniu odpowiedniego /
+  // do adresu oraz uruchomieniu dwięku
+  if(component!==window.location.pathname){
+    play("switch");
+    window.history.pushState("object or string", "Page Title", component);
+    scrBhw = "smooth";
+  }
+  else{
+    //  uruchomienie loadera na kompterach przy zmienianiu wielkości okna
+    if(!isMobile){
+      const loader = document.querySelector(".Loader-Box");
+      loader.classList.remove("Loader-Box-Shadow")
+      const loaderGif = document.querySelector(".Loader-Gif");
+      loader.style.display= "block";
+      loaderGif.style.display= "block";
+      clearTimeout( timeHandler )
+      timeHandler = setTimeout(removeLoaderGif, 3000, loaderGif,loader)
+      timeHandler = setTimeout(removeLoader, 4000, loader)
+    }
+    else{
+      // debug rozdzielczości na mobilnych urzadzeniach
+      // document.querySelector(".Image1").innerHTML = "HEIGHT:</br>current: "+window.innerHeight+"</br> initial: "+initialHeight;
+      // document.querySelector(".Image2").innerHTML = "WIDTH:</br>current: "+window.innerWidth+"</br> initial: "+initialWidth;
+    }
+  }
+
+
+
+    // if(isMobile && initialHeight > window.innerHeight)
+  //   lock.style.display = "block";
+    
+
+
+  // pomijanie adresbarr i scrolowanie przy uruchomionej klawiaturze
+  if(isMobile && (initialHeight === window.innerHeight && !isLandspace )){
+    h=h+56;
+  }   
+  
+  if((isMobile) && initialHeight > window.innerHeight){
+    h=h+112;
+  }
+
+
+
+
+    
+  // blokada pozioma dla mobilnych
+
+  lock.style.display = "none";
+  if(isMobile && (window.innerWidth > window.innerHeight)){
+    lock.style.display = "block";
+  }
+
+  // h: 340
+  // w: 800
+
+  // funkcja przechodząca między modułami
+  if(component==="/ranks"){
+    window.scrollTo({ 
+      left: w,
+      top: 0, 
+      behavior: scrBhw }); 
+    return 0;
+  }
+  if(component==="/weapons"){
+    window.scrollTo({ 
+      left: 0,
+      top: h, 
+      behavior: scrBhw}); 
+    return 0;
+  }
+  if(component==="/skins"){
+    window.scrollTo({ 
+      left: 2*w+5,
+      top: h, 
+      behavior: scrBhw}); 
+    return 0;
+  }
+  if(component==="/calc"){
+    window.scrollTo({ 
+      left: w,
+      top: 2*h+5, 
+      behavior: scrBhw}); 
+    return 0;
+  }
+  window.scrollTo({ 
+    left: w,
+    top: h, 
+    behavior: scrBhw
+  }); 
+  return 0;
+}
+
+export const resizer = ()=> {
+  move(window.location.pathname)
+}
+
+
+
+
+
+
+
+
+
+
+// -----  COIN FLIP ANIMATION  -----
 const addAnim = (coins, anim) =>{
   coins.classList.add(anim);
 }
@@ -113,7 +230,7 @@ export const coin_flip = ()=>{
 }
 
 
-// SKIN FLOAT
+// -----  SKIN FLOAT  -----
 export  const   float_skin = (event,float) =>{
   const id_skin = "#"+event.name_weapon+event.name_skin
   const skin_img = document.querySelector(id_skin)

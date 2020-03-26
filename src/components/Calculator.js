@@ -2,7 +2,7 @@ import React from 'react';
 import './style/Calculator.css';
 import Valute from './Valute.js'
 import { move } from './Service'
-import { calcItems } from './Service'
+import { calcItems, dropItem, dropAllItem } from './Service'
 
 class Calculator extends React.Component {
   constructor(props){
@@ -20,8 +20,15 @@ class Calculator extends React.Component {
         error: ''
       }
   }
+  componentWillMount(){
+    if(localStorage.getItem("calcItems")){
+      this.setState({
+        item: JSON.parse(localStorage.getItem("calcItems"))
+      })
+    }
+  }
   componentDidMount(){
-
+      this.moneyAll()
   }
   componentDidUpdate(){
     this.valueAllItem.bind(this)
@@ -241,6 +248,7 @@ class Calculator extends React.Component {
 
 
   deleteOneItem = (id) =>{
+    dropItem (id)
     this.state.item.splice(id, 1)
     this.setState({
       item: this.state.item,
@@ -249,6 +257,7 @@ class Calculator extends React.Component {
   }
 
   deleteAllItem = () =>{
+    dropAllItem()
     this.setState({
       summary: 0,
       item: []
@@ -290,21 +299,23 @@ class Calculator extends React.Component {
     <div className= "Calculator" >
      
       
-      <div className="Calculator-Form-Box">
-      <img src="/image/layout/arrowup.png" className=" Calculator-Back" alt="arrow" onClick={()=>move()} />
-      <Valute changeValute={this.changeValute.bind(this)} fromValute="Calculator-Valute" />
+     <div className="nav-calc">
+        <img src="/image/layout/arrowup.png" className=" Calculator-Back" alt="arrow" onClick={()=>move("/")} />
+        <Valute changeValute={this.changeValute.bind(this)} fromValute="Calculator-Valute" />
           <div className="Calculator-Title-Box">
+          <img className="Calculator-LogoCS-IMG" src="/image/layout/logo.png" alt="SORRY THIS IMG IS CRASHED"/>
           <h2>CALCULATOR</h2>
-          </div>
-
-
+        </div>
+      </div>
+      <div className="Presents-Calc">
+      <div className="Calculator-Form-Box">
           <div className="Calculator-Form">
             <span  className="Calculator-Form-Span">SKIN NAME</span>
             <input type='text'  id='skinName' className="Calculator-Form-inputSkinName" maxLength="30" placeholder="Skin name ..."  />
             <span  className="Calculator-Form-Span">COST</span>
-            <input type='number'  id='cost' onChange={this.lookingForInput.bind(this)} className="Calculator-Form-inputCost" min='0' placeholder="cost ..." onKeyDown={(evt) => ["e", "E", "+", "-"].includes(evt.key) && evt.preventDefault()}/>
+            <input type='text'  id='cost' onChange={this.lookingForInput.bind(this)} maxLength="8" className="Calculator-Form-inputCost" min='0' placeholder="cost ..." onKeyDown={(evt) =>!["1","2","3", "4", "5", "6","7","8","9","0",".","Backspace"].includes(evt.key) && evt.preventDefault()}/>
             <span  className="Calculator-Form-Span">QUANTITY</span>
-            <input type='number' id='quantity' onChange={this.money.bind(this)} className="Calculator-Form-inputQuantity" placeholder="1" min='1' onKeyDown={(evt) => ["e", "E", "+", "-",",","."].includes(evt.key) && evt.preventDefault()}/>
+            <input type='text' id='quantity' onChange={this.money.bind(this)} maxLength="3" className="Calculator-Form-inputQuantity" placeholder="1" min='1' onKeyDown={(evt) => !["1","2","3", "4", "5", "6","7","8","9","0","Backspace"].includes(evt.key) && evt.preventDefault()}/>
             <span className= "errorCost">{this.state.error}</span>   
             <button className="Calculator-Form-Button " onClick = {this.addItem.bind(this)}>ADD ITEM</button><br/>
         </div>
@@ -319,11 +330,12 @@ class Calculator extends React.Component {
             <tbody>
             <tr>
               <th className="Table-Form-Title-Index" >l.p.</th>
-              <th className="Table-Form-Title-NameSkin" >SKIN NAME</th>
+              <th className="Table-Form-Title-NameSkin" >NAME</th>
               <th className="Table-Form-Title-Cost" >COST</th>
-              <th className="Table-Form-Title-Quantity">QUANTITY</th>
-              <th className="Table-Form-Title-Sumary">SUMARRY VALUE</th>
+              <th className="Table-Form-Title-Quantity"> </th>
+              <th className="Table-Form-Title-Sumary">SUMARRY</th>
               <th className="Table-Form-Title-Delete"> </th>
+              <th className="Table-Form-Title-Delete-X"></th>
             </tr>
 
               {this.state.item.map((event,index) => {
@@ -332,9 +344,10 @@ class Calculator extends React.Component {
                 <td key={index} className="Table-Index" >{index+1}</td>
                 <td className="Table-SkinName">{event.nazwa}</td>
                 <td className="Table-Cost">{event.cena} {this.state.valute}</td>
-                <td className="Table-Quantity">{event.ilosc} szt.</td>
+                <td className="Table-Quantity">{event.ilosc}</td>
                 <td className="Table-Sumary">{(event.cena*event.ilosc).toFixed(2)} {this.state.valute}</td>
                 <td className="Table-ButtonDelete"><button onClick={this.deleteOneItem.bind(this,index)}>DELETE</button></td>
+                <td className="Table-ButtonDelete-X"><button onClick={this.deleteOneItem.bind(this,index)}>X</button></td>
                 </tr>
                 )
               })}
@@ -353,10 +366,8 @@ class Calculator extends React.Component {
               <div className="Calculator-Quantity">
                 {this.valueAllItem()}
               </div>
-              <div className="Calculator-LogoCS">
-              <img className="Calculator-LogoCS-IMG" src="/image/layout/logo.png" alt="SORRY THIS IMG IS CRASHED"/>
-              </div>
       </div>
+     </div>
     </div>
      )
     
